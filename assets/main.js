@@ -135,7 +135,7 @@ for (const key of ['arxiv','code']) {
   const link=document.createElement('a');
   link.href=url;link.id=placeholder.id;link.className='resource';link.target='_blank';link.rel='noopener';
   // Preserve the arXiv/GitHub marks when enabling the real links.
-  link.append(...[...placeholder.children].filter(el=>el.tagName!=='SMALL'));
+  link.append(...[...placeholder.childNodes].filter(node=>node.nodeName!=='SMALL'));
   placeholder.replaceWith(link);
 }
 if (config.authors?.length) {
@@ -160,16 +160,8 @@ for (const [key,path] of Object.entries(config.videos||{})) {
   const still=$('img',slot);video.poster=safeURL(config.posters?.[key])||still?.src||'';
   if(slot.classList.contains('task-media')){
     const fallback=[...slot.childNodes];slot.replaceChildren(video);
-    // Keep a real image visible until the browser presents a decoded frame.
-    const cover=document.createElement('img');
-    cover.src=video.poster;cover.alt='';cover.className='video-cover';
-    slot.append(cover);
-    video.addEventListener('playing',()=>{
-      if(video.requestVideoFrameCallback){
-        video.requestVideoFrameCallback(()=>{if(!video.paused)cover.hidden=true;});
-      }else{cover.hidden=true;}
-    });
-    video.addEventListener('pause',()=>{if(video.closest('[hidden]') || !video.closest('.chapter.is-in-view'))cover.hidden=false;});
+    // The native poster is only shown before playback. Pausing, buffering,
+    // looping and returning to a slide retain the video's decoded frame.
     const kind=$('.media-kind',slot.closest('figure'));
     if(kind)kind.textContent=config.videoSpeeds?.[key] > 1 ? ` · ${config.videoSpeeds[key]}× speed` : ' · Video';
     video.addEventListener('error',()=>{

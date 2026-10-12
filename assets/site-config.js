@@ -2,7 +2,7 @@
 window.GEOMEM_CONFIG = {
   authors: [], // [{ name: 'Author Name', url: 'https://...', affiliation: '1' }]
   affiliations: [], // ['1 University / Institute']
-  links: { arxiv: null, code: null },
+  links: { arxiv: null, code: 'https://github.com/GeoMem-VLA/GeoMem-VLA' },
   videos: {
     teaser: null, // 'assets/videos/teaser.mp4'
     reconstruction: null, eef: null, memory: null,
