@@ -20,6 +20,35 @@
   method.append(layout);
   document.body.classList.add('flow-mode');
 
+  // Group the abstract with Overview, and the three diagnostics with Analysis.
+  // Native anchors keep keyboard navigation, history and continuous scrolling.
+  const nav = document.querySelector('.site-nav');
+  const links = [...nav.querySelectorAll('.nav-links a')];
+  const destinations = links.map(link => document.querySelector(link.hash));
+  function updateNavigation() {
+    const readingLine = nav.offsetHeight + 100;
+    let active = -1;
+    destinations.forEach((section, index) => {
+      if (section.getBoundingClientRect().top <= readingLine) active = index;
+    });
+    links.forEach((link, index) => {
+      if (index === active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  let navigationPending = false;
+  window.addEventListener('scroll', () => {
+    if (navigationPending) return;
+    navigationPending = true;
+    requestAnimationFrame(() => {
+      updateNavigation();
+      navigationPending = false;
+    });
+  }, {passive:true});
+  window.addEventListener('resize', updateNavigation);
+  window.addEventListener('load', updateNavigation);
+  updateNavigation();
+
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
