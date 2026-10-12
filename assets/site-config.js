@@ -7,7 +7,7 @@ window.GEOMEM_CONFIG = {
     teaser: null, // 'assets/videos/teaser.mp4'
     reconstruction: null, eef: null, memory: null,
     sticks: 'assets/videos/sticks-4x.mp4',
-    cup: 'assets/videos/cup-4x.mp4',
+    cup: 'assets/videos/cup-4x.mp4?v=20261012-trim',
     pockets: 'assets/videos/pockets-4x.mp4',
     cube: null, apple: null
   },
