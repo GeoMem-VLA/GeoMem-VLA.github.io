@@ -2,30 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GeoMem-VLA. Coming soon.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models.">
+  <meta property="og:title" content="GeoMem-VLA">
+  <meta property="og:description" content="Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://GeoMem-VLA.github.io/assets/images/overview.webp">
   <title>GeoMem-VLA</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      min-height: 100svh;
-      display: grid;
-      place-items: center;
-      background: #f8fafc;
-      color: #162b44;
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    }
-    main { width: 100%; padding: 32px 20px; text-align: center; }
-    h1 { margin: 0; font-size: clamp(36px, 9vw, 80px); line-height: 1.2; letter-spacing: -0.04em; }
-    p { margin: 20px 0 0; color: #617186; font-size: 18px; }
-  </style>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/chapters.css">
+  <script src="assets/site-config.js" defer></script>
+  <script src="assets/main.js" defer></script>
+  <script src="assets/chapters.js" defer></script>
 </head>
 <body>
-  <main>
+  <a class="skip-link" href="#overview">Skip to content</a>
+  <header class="hero" id="top">
     <h1>GeoMem-VLA</h1>
-    <p>Coming soon</p>
+    <p class="paper-title">Internalizing 3D Scene Understanding<br> into Temporal Memory for Vision-Language-Action Models</p>
+    <p id="authors">Authors to be announced</p>
+    <p id="affiliations" hidden></p>
+    <div class="resource-links">
+      <span class="resource" id="arxiv-link" aria-label="arXiv, coming soon"><img src="assets/icons/arxiv.svg" width="20" height="23" alt=""><span>arXiv</span><small>Coming soon</small></span>
+      <span class="resource" id="code-link" aria-label="GitHub, coming soon"><img src="assets/icons/github.svg" width="21" height="21" alt=""><span>GitHub</span><small>Coming soon</small></span>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <section id="overview" class="section">
+      <h2>Overview</h2>
+      <div data-media-slot="teaser"><figure class="figure"><button class="zoomable" data-zoom="assets/images/overview.webp" aria-label="Enlarge GeoMem-VLA overview"><img src="assets/images/overview.webp" width="2800" height="1702" loading="lazy" alt="GeoMem-VLA overview"></button></figure></div>
+    </section>
+    <section id="abstract" class="section abstract"><h2>Abstract</h2>
+        <p>Geometric structure provides a direct description of the 3D world and is essential for robotic manipulation and world understanding. Most VLA models primarily rely on 2D representations of the current observation, while geometry-aware approaches often require additional 3D geometric information. However, such geometric information, typically inferred independently from individual observations, is often discarded rather than accumulated into a persistent task representation. Our key insight is that action generation needs a compact, task-relevant geometric abstraction that can be continuously updated over time, rather than a complete, renderable 3D reconstruction at every step. Based on this insight, we introduce <strong>GeoMem-VLA</strong>, a VLA framework that internalizes explicit 3D supervision into dedicated geometric tokens, without directly aligning the VLM’s native visual embeddings to the teacher feature space, and maintains them as temporal memory for action generation. During training, a frozen geometry foundation model supervises learnable GeoPlan tokens through a geometric flow-matching objective over the current scene point map and future end-effector tracks. These tokens are subsequently integrated with the memory of observation representations, where historical information is retrieved, adaptively fused with current observations, and consolidated to keep event frames as the task progresses. At inference, the policy retrieves historical representations and fuses them with the current working representation to predict actions, without invoking the 3D teacher or explicitly reconstructing the scene. After benchmark-specific downstream adaptation, GeoMem-VLA achieves 98.9% average success on LIBERO and 91.10% / 91.24% on the clean/randomized settings of the RoboTwin benchmark. In 5 real-world tasks, GeoMem-VLA achieves 78.0% average success. These results indicate that internalizing and remembering 3D scene understanding is a promising approach to optimizing robot control strategies.</p>
+    </section>
+    <section id="method" class="section">
+      <h2>Model Architecture</h2>
+      <figure class="figure"><button class="zoomable" data-zoom="assets/images/architecture.webp" aria-label="Enlarge GeoMem-VLA model architecture"><img src="assets/images/architecture.webp" width="2800" height="1528" loading="lazy" alt="GeoMem-VLA model architecture"></button></figure>
+      <div class="method-description">
+        <div><h3>GeoPlan Tokens</h3><p>Learnable GeoPlan tokens are appended to the vision–language sequence. Their hidden states are projected into a compact geometry representation, while the VLM’s native observation embeddings are preserved for action generation.</p></div>
+        <div><h3>3D Supervision</h3><p>A frozen VGGT teacher provides current-scene point maps. The 3D spatial plan head jointly predicts scene geometry and future end-effector tracks through geometric flow matching. This auxiliary supervision trains the GeoPlan representation.</p></div>
+        <div><h3>Temporal Memory</h3><p>Separate memory banks retain observation and geometry representations. Current tokens retrieve historical context through cross-attention, and an adaptive gate fuses the retrieved features. Similar adjacent entries are consolidated to maintain a bounded memory.</p></div>
+        <div><h3>Action Expert</h3><p>A conditional diffusion transformer generates action chunks with flow matching from the current representation and retrieved memory. At inference, the policy uses latent geometry and temporal context without running VGGT or explicitly reconstructing the scene.</p></div>
+      </div>
+    </section>
+    <section id="geometry" class="section">
+      <h2>3D Reconstruction</h2>
+      <div class="case-slot" data-media-slot="reconstruction"><div class="case-placeholder"><span>Cases coming soon</span></div></div>
+    </section>
+    <section id="eef" class="section">
+      <h2>EEF Track Prediction</h2>
+      <div class="case-slot" data-media-slot="eef"><div class="case-placeholder"><span>Cases coming soon</span></div></div>
+    </section>
+    <section id="memory" class="section">
+      <h2>Memory Bank &amp; Event Frames</h2>
+      <div class="case-slot" data-media-slot="memory"><div class="case-placeholder"><span>Cases coming soon</span></div></div>
+    </section>
+    <section id="results" class="section">
+      <h2>Experiment Results</h2>
+      <div class="tabs" role="tablist" aria-label="Benchmark results"><button role="tab" id="libero-tab" aria-selected="true" aria-controls="benchmark-panel" tabindex="0" data-benchmark="libero">LIBERO</button><button role="tab" id="robotwin-tab" aria-selected="false" aria-controls="benchmark-panel" tabindex="-1" data-benchmark="robotwin">RoboTwin 2.0</button><button role="tab" id="ablation-tab" aria-selected="false" aria-controls="benchmark-panel" tabindex="-1" data-benchmark="ablation">Ablations</button></div>
+      <div id="benchmark-panel" role="tabpanel" aria-labelledby="libero-tab"><p id="benchmark-description" class="caption"></p><div class="table-scroll" tabindex="0" role="region" aria-label="Benchmark results"><table id="benchmark-table"></table></div></div>
+      <noscript><p>Results are available in Tables 1–4 of the manuscript.</p></noscript>
+      <p class="note">Success rate (%). Published baselines may use different training data and evaluation protocols.</p>
+    </section>
+    <section id="real-world" class="section">
+      <h2>Real-World Experiments</h2>
+      <figure class="figure real-world-summary" id="real-world-results"><button class="zoomable" data-zoom="assets/images/real-world-results.webp" aria-label="Enlarge Real-world success rates"><img src="assets/images/real-world-results.webp" width="2800" height="960" loading="lazy" alt="Real-world success rates"></button></figure>
+      <div class="gallery task-gallery" data-gallery role="region" aria-roledescription="carousel" aria-label="Real-world tasks">
+        <div class="gallery-stage">
+          <figure class="task gallery-slide" data-slide data-title="Pick and Stand Sticks">
+            <div class="task-media" data-media-slot="sticks"><img src="assets/images/task-sticks.webp" width="332" height="271" loading="lazy" alt="Pick and Stand Sticks: task setup from Figure 4"></div>
+            <figcaption><h3>Pick and Stand Sticks</h3><p>Astribot S1 · 90% success<span class="media-kind"> · Task setup</span></p></figcaption>
+          </figure>
+          <figure class="task gallery-slide" data-slide data-title="Transfer Cup Across Rack">
+            <div class="task-media" data-media-slot="cup"><img src="assets/images/task-cup.webp" width="331" height="271" loading="lazy" alt="Transfer Cup Across Rack: task setup from Figure 4"></div>
+            <figcaption><h3>Transfer Cup Across Rack</h3><p>Astribot S1 · 70% success<span class="media-kind"> · Task setup</span></p></figcaption>
+          </figure>
+          <figure class="task gallery-slide" data-slide data-title="Separate File Pockets">
+            <div class="task-media" data-media-slot="pockets"><img src="assets/images/task-pockets.webp" width="327" height="271" loading="lazy" alt="Separate File Pockets: task setup from Figure 4"></div>
+            <figcaption><h3>Separate File Pockets</h3><p>Astribot S1 · 100% success<span class="media-kind"> · Task setup</span></p></figcaption>
+          </figure>
+          <figure class="task gallery-slide" data-slide data-title="Pick Cube n Times">
+            <div class="task-media" data-media-slot="cube"><img src="assets/images/task-cube.webp" width="332" height="271" loading="lazy" alt="Pick Cube n Times: task setup from Figure 4"></div>
+            <figcaption><h3>Pick Cube n Times</h3><p>AgileX Cobot Magic 2 · 50% success<span class="media-kind"> · Task setup</span></p></figcaption>
+          </figure>
+          <figure class="task gallery-slide" data-slide data-title="Cover and Find the Apple">
+            <div class="task-media" data-media-slot="apple"><img src="assets/images/task-apple.webp" width="336" height="271" loading="lazy" alt="Cover and Find the Apple: task setup from Figure 4"></div>
+            <figcaption><h3>Cover and Find the Apple</h3><p>AgileX Cobot Magic 2 · 80% success<span class="media-kind"> · Task setup</span></p></figcaption>
+          </figure>
+        </div>
+        <div class="pager" hidden>
+          <button type="button" data-prev aria-label="Previous task"><span aria-hidden="true">←</span></button>
+          <span class="page-count" aria-live="polite" aria-atomic="true"></span>
+          <button type="button" data-next aria-label="Next task"><span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <p class="note">10 rollouts per task.</p>
+    </section>
+    <section id="citation-block" class="section" hidden><h2>BibTeX</h2><div class="citation-tools"><button id="copy-citation">Copy</button><span id="copy-status" role="status"></span></div><pre id="bibtex"></pre></section>
   </main>
+  <footer><a href="#top">GeoMem-VLA</a></footer>
+  <dialog id="figure-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><p id="dialog-title">Figure</p><button id="close-dialog" aria-label="Close figure">Close ×</button></div><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div></dialog>
 </body>
 </html>

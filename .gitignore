@@ -1,0 +1,9 @@
+# Local source material and temporary files (not published)
+/work/
+/outputs/
+/images/
+/videos/
+*.pdf
+__pycache__/
+.DS_Store
+Thumbs.db

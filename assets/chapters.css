@@ -1,0 +1,67 @@
+/* Continuous paper layout: generous sections, native scrolling, gentle reveals. */
+.case-slot{width:100%;max-width:960px;margin:0 auto}
+.case-placeholder{height:clamp(180px,27vh,290px);display:grid;place-items:center;background:#f7f8fa;border:1px dashed #d6dce2;border-radius:8px;color:#929aa3;font-size:15px;letter-spacing:.01em}
+.task-media{position:relative}
+.task-media .video-cover{position:absolute;inset:0;max-width:none!important;width:100%;height:100%;object-fit:contain;pointer-events:none;clip-path:inset(0 0 42px 0)}
+/* Avoid transform animations on ancestors of playing video surfaces. */
+.task-gallery .gallery-slide:not([hidden]){animation:none}
+.task-gallery .gallery-slide:not([hidden]) figcaption{animation:content-enter .3s ease-out}
+.flow-mode #main{width:100%;max-width:none}
+.flow-mode .chapter{width:100%;max-width:none;min-height:0;padding:0;margin:0;border:0;scroll-margin-top:0}
+.chapter-scroll{padding:64px 48px}
+.chapter-content{width:100%;max-width:1040px;min-height:0;margin:auto;display:flex;flex-direction:column;justify-content:center;align-items:stretch}
+.chapter-content>*{flex-shrink:0}
+.flow-mode .chapter h2{font-size:clamp(25px,2.5vw,32px);margin:0 0 30px}
+.flow-mode .chapter.has-entered:not(:has(video)) .chapter-content{animation:content-enter .65s cubic-bezier(.2,.65,.3,1)}
+.flow-mode .hero .chapter-content{align-items:center;min-height:calc(76svh - 128px)}
+.flow-mode .hero{min-height:76svh}
+.flow-mode #overview .figure{width:100%}
+.flow-mode #overview .zoomable{display:flex;justify-content:center}
+.flow-mode #overview img{width:auto;max-width:100%;max-height:75svh;object-fit:contain}
+.flow-mode .abstract .chapter-content{max-width:940px}
+.flow-mode .abstract p{font-size:clamp(15px,1.5vw,17px);line-height:1.85}
+.method-layout{display:grid;grid-template-columns:1fr;align-items:center;gap:32px}
+.method-layout .figure{width:100%;max-width:960px}
+.method-layout .method-description{grid-template-columns:repeat(4,1fr);gap:24px;margin:0;max-width:none}
+.method-layout .method-description h3{font-size:16px;margin-bottom:7px}
+.method-layout .method-description p{font-size:13px;line-height:1.75}
+.flow-mode .task-gallery{width:min(900px,100%)}
+.flow-mode .task-gallery .pager{margin-top:18px}
+.flow-mode .task-gallery .task h3{margin-top:16px;font-size:18px}
+.flow-mode #real-world .note{margin-top:16px}
+.flow-mode #results .tabs{margin-bottom:8px}
+.flow-mode #results .caption{margin-top:0}
+.flow-mode footer{margin-top:0}
+@keyframes content-enter{from{opacity:.25;translate:0 16px}to{opacity:1;translate:0 0}}
+@media(max-width:800px){
+ .chapter-scroll{padding:50px 28px}
+ .chapter-content{min-height:0}
+ .method-layout{grid-template-columns:1fr;gap:28px}
+ .method-layout .figure{max-width:960px}
+ .method-layout .method-description{grid-template-columns:1fr 1fr;gap:22px 26px}
+}
+@media(max-width:550px){
+ .chapter-scroll{padding:40px 20px}
+ .chapter-content{min-height:0}
+ .flow-mode .chapter{min-height:0}
+ .flow-mode .hero .chapter-content{min-height:calc(70svh - 80px)}
+ .flow-mode .hero{min-height:70svh}
+ .flow-mode .abstract p{text-align:left;font-size:15px;line-height:1.8}
+ .method-layout .method-description{grid-template-columns:1fr;gap:20px}.method-layout .method-description p{font-size:14px}
+ .flow-mode .task-gallery{width:100%}
+ .flow-mode .task-gallery .task h3{font-size:16px}
+ .flow-mode .task-gallery .task figcaption p{font-size:10px}
+ .case-placeholder{height:220px;min-height:0;font-size:14px}
+}
+@media(max-height:550px) and (min-width:551px){
+ .chapter-scroll{padding:44px 36px}
+ .flow-mode .task-gallery{width:min(700px,100%)}
+}
+@media(prefers-reduced-motion:reduce){
+ .flow-mode .chapter.has-entered:not(:has(video)) .chapter-content,.task-gallery .gallery-slide:not([hidden]) figcaption{animation:none}
+}
+
+@media(min-width:801px) and (max-width:1100px){.method-layout .method-description{grid-template-columns:1fr 1fr;gap:24px 32px}}
+
+.flow-mode .real-world-summary{width:100%;margin:0 auto 30px}
+@media(max-width:550px){.flow-mode .real-world-summary{margin-bottom:22px}}
