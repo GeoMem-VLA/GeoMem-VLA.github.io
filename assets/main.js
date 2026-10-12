@@ -169,7 +169,6 @@ for (const [key,path] of Object.entries(config.videos||{})) {
         video.requestVideoFrameCallback(()=>{if(!video.paused)cover.hidden=true;});
       }else{cover.hidden=true;}
     });
-    video.addEventListener('waiting',()=>{cover.hidden=false;});
     video.addEventListener('pause',()=>{if(video.closest('[hidden]') || !video.closest('.chapter.is-in-view'))cover.hidden=false;});
     const kind=$('.media-kind',slot.closest('figure'));
     if(kind)kind.textContent=config.videoSpeeds?.[key] > 1 ? ` · ${config.videoSpeeds[key]}× speed` : ' · Video';
