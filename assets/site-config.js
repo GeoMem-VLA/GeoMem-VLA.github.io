@@ -20,7 +20,7 @@ window.GEOMEM_CONFIG = {
     { id: '6', name: 'Fudan University' },
     { id: '7', name: 'Tencent' }
   ],
-  links: { arxiv: null, code: 'https://github.com/GeoMem-VLA/GeoMem-VLA' },
+  links: { arxiv: null, code: 'https://github.com/GeoMem-VLA/GeoMem-VLA', huggingface: null },
   videos: {
     teaser: null, // 'assets/videos/teaser.mp4'
     reconstruction: null, eef: null, memory: null,

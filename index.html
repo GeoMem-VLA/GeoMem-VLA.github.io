@@ -12,9 +12,9 @@
   <title>GeoMem-VLA</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="assets/chapters.css?v=20261013-authors">
-  <script src="assets/site-config.js?v=20261013-authors" defer></script>
-  <script src="assets/main.js?v=20261013-authors" defer></script>
+  <link rel="stylesheet" href="assets/chapters.css?v=20261013-result-tabs">
+  <script src="assets/site-config.js?v=20261013-resources" defer></script>
+  <script src="assets/main.js?v=20261013-resources" defer></script>
   <script src="assets/chapters.js?v=20261012-nav" defer></script>
 </head>
 <body>
@@ -39,6 +39,7 @@
     <div class="resource-links">
       <span class="resource" id="arxiv-link" aria-label="arXiv, coming soon"><img src="assets/icons/arxiv.svg" width="20" height="23" alt=""><span>arXiv</span><small>Coming soon</small></span>
       <span class="resource" id="code-link" aria-label="GitHub, coming soon"><img src="assets/icons/github.svg" width="21" height="21" alt=""><span>GitHub</span><small>Coming soon</small></span>
+      <span class="resource" id="huggingface-link" aria-label="Hugging Face, coming soon"><span class="resource-emoji" aria-hidden="true">🤗</span><span>Hugging Face</span><small>Coming soon</small></span>
     </div>
   </header>
   <main id="main" class="container">
@@ -112,7 +113,12 @@
       </div>
       <p class="note">10 rollouts per task.</p>
     </section>
-    <section id="citation-block" class="section" hidden><h2>BibTeX</h2><div class="citation-tools"><button id="copy-citation">Copy</button><span id="copy-status" role="status"></span></div><pre id="bibtex"></pre></section>
+    <section id="citation-block" class="section">
+      <h2>Citation</h2>
+      <p id="citation-placeholder" class="citation-placeholder">BibTeX coming soon.</p>
+      <div class="citation-tools" hidden><button id="copy-citation" type="button">Copy BibTeX</button><span id="copy-status" role="status"></span></div>
+      <pre id="bibtex" hidden></pre>
+    </section>
   </main>
   <footer><a href="#top">GeoMem-VLA</a></footer>
   <dialog id="figure-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><p id="dialog-title">Figure</p><button id="close-dialog" aria-label="Close figure">Close ×</button></div><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div></dialog>

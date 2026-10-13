@@ -11,7 +11,7 @@ Run `python -m http.server 8000 --bind 127.0.0.1` and open http://127.0.0.1:8000
 ## Update
 
 - `index.html`: paper content, figures, and experiment sections.
-- `assets/site-config.js`: authors, affiliations, arXiv/GitHub links, videos, posters, and BibTeX. Keep unavailable resources as `null`.
+- `assets/site-config.js`: authors, affiliations, arXiv/GitHub/Hugging Face links, videos, posters, and BibTeX. Keep unavailable resources as `null`. Setting `links.huggingface` enables its button; setting `bibtex` replaces the Citation placeholder and enables copying.
 - `assets/main.js`: benchmark data, galleries, figure viewer, and video playback.
 - `assets/style.css`: base styles; `assets/chapters.css` and `assets/chapters.js`: continuous section layout and reveal animations.
 - `assets/images/` and `assets/videos/`: published media only.

@@ -128,7 +128,7 @@ function safeURL(value) {
   if (typeof value !== 'string' || !value.trim()) return null;
   try {const url=new URL(value,document.baseURI);return ['https:','http:','file:'].includes(url.protocol)?url.href:null;} catch {return null;}
 }
-for (const key of ['arxiv','code']) {
+for (const key of ['arxiv','code','huggingface']) {
   const url=safeURL(config.links?.[key]);
   if (!url) continue;
   const placeholder=$(`#${key}-link`);
@@ -187,7 +187,9 @@ for (const [key,path] of Object.entries(config.videos||{})) {
   }
 }
 if(config.bibtex){
-  $('#citation-block').hidden=false;$('#bibtex').textContent=config.bibtex;
+  $('#citation-placeholder').hidden=true;
+  $('.citation-tools').hidden=false;
+  $('#bibtex').hidden=false;$('#bibtex').textContent=config.bibtex;
   $('#copy-citation').addEventListener('click',async()=>{
     try{await navigator.clipboard.writeText(config.bibtex);$('#copy-status').textContent='Copied.';}
     catch{$('#copy-status').textContent='Select the entry to copy.';}
