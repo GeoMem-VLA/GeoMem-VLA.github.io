@@ -78,6 +78,10 @@ function renderBenchmark(name) {
     values.forEach((text, col) => {
       const cell = document.createElement(col === 0 ? 'th' : 'td');
       cell.textContent = text;
+      if (name === 'ablation' && (col === 1 || col === 2)) {
+        cell.textContent = text === 'Yes' ? '✓' : '✗';
+        cell.setAttribute('aria-label', text);
+      }
       if (col === 0) cell.scope = 'row';
       if (index === 0 && col === 0) {
         const badge = document.createElement('span'); badge.textContent = 'Ours'; cell.append(' ', badge);
