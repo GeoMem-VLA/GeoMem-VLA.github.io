@@ -1,7 +1,25 @@
 /* Replace null with a URL/path when a resource is ready. No build step needed. */
 window.GEOMEM_CONFIG = {
-  authors: [], // [{ name: 'Author Name', url: 'https://...', affiliation: '1' }]
-  affiliations: [], // ['1 University / Institute']
+  authors: [
+    { name: 'Qinfan Zhang', affiliation: '1' },
+    { name: 'Yifan Luo', affiliation: '2' },
+    { name: 'Haoyuan Shi', affiliation: '3' },
+    { name: 'Guanlin Liu', affiliation: '4' },
+    { name: 'Han Dong', affiliation: '5' },
+    { name: 'Haozhe Shan', affiliation: '6' },
+    { name: 'Yong Dai', affiliation: '7' },
+    { name: 'Xiangcong Ren', affiliation: '5' },
+    { name: 'Xiaozhu Ju', affiliation: '5' }
+  ],
+  affiliations: [
+    { id: '1', name: 'Beihang University' },
+    { id: '2', name: 'Renmin University of China' },
+    { id: '3', name: 'University of Science and Technology of China' },
+    { id: '4', name: 'The Chinese University of Hong Kong Shenzhen' },
+    { id: '5', name: 'Beijing Humanoid Robot Innovation Center' },
+    { id: '6', name: 'Fudan University' },
+    { id: '7', name: 'Tencent' }
+  ],
   links: { arxiv: null, code: 'https://github.com/GeoMem-VLA/GeoMem-VLA' },
   videos: {
     teaser: null, // 'assets/videos/teaser.mp4'

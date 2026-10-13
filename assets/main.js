@@ -148,7 +148,18 @@ if (config.authors?.length) {
     $('#authors').append(name);
   });
 }
-if(config.affiliations?.length){$('#affiliations').textContent=config.affiliations.join(' · ');$('#affiliations').hidden=false;}
+if(config.affiliations?.length){
+  const affiliations=$('#affiliations');
+  affiliations.replaceChildren();
+  config.affiliations.forEach(affiliation=>{
+    const item=document.createElement('span');
+    const number=document.createElement('sup');
+    number.textContent=affiliation.id;
+    item.append(number,` ${affiliation.name}`);
+    affiliations.append(item);
+  });
+  affiliations.hidden=false;
+}
 
 for (const [key,path] of Object.entries(config.videos||{})) {
   const url=safeURL(path),slot=$(`[data-media-slot="${key}"]`);

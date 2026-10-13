@@ -1,4 +1,9 @@
 /* Continuous paper layout: generous sections, native scrolling, gentle reveals. */
+.hero #authors{max-width:1040px;font-size:15px;gap:6px 16px}
+#authors>span,#authors>a{white-space:nowrap}
+.hero #affiliations{max-width:940px;display:flex;justify-content:center;flex-wrap:wrap;gap:5px 20px;margin-top:18px;font-size:13px;line-height:1.8}
+#affiliations sup{font-size:9px}
+@media(max-width:550px){.hero #affiliations{gap:5px 14px;font-size:11px}.hero #authors{font-size:13px;gap:6px 16px}}
 :root{--nav-height:60px}
 html{scroll-padding-top:calc(var(--nav-height) + 12px)}
 .site-nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid #eceef1}
