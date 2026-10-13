@@ -15,11 +15,12 @@ html{scroll-padding-top:calc(var(--nav-height) + 12px)}
 .nav-links a{position:relative;padding:18px 0;font-size:13px;line-height:24px;color:#737b84;white-space:nowrap;transition:color .15s}
 .nav-links a:hover,.nav-links a[aria-current="location"]{color:var(--accent)}
 .nav-links a[aria-current="location"]::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent)}
-@media(max-width:650px){
+@media(max-width:800px){
  :root{--nav-height:88px}
  .nav-inner{padding:0 20px;gap:0;align-items:flex-start;flex-direction:column}
  .nav-brand{font-size:14px;line-height:40px}
- .nav-links{width:100%;justify-content:space-between;gap:12px}
+ .nav-links{width:100%;justify-content:space-between;gap:16px;overflow-x:auto;scrollbar-width:none}
+ .nav-links::-webkit-scrollbar{display:none}
  .nav-links a{font-size:12px;padding:10px 0 12px;line-height:24px}
 }
 .case-slot{width:100%;max-width:960px;margin:0 auto}

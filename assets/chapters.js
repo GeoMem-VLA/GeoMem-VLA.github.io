@@ -31,6 +31,10 @@
     destinations.forEach((section, index) => {
       if (section.getBoundingClientRect().top <= readingLine) active = index;
     });
+    // The short Citation section cannot always reach the reading line.
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+      active = links.length - 1;
+    }
     links.forEach((link, index) => {
       if (index === active) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
