@@ -5,6 +5,8 @@
 #authors>span,#authors>a{white-space:nowrap}
 .hero #affiliations{max-width:940px;display:flex;justify-content:center;flex-wrap:wrap;gap:5px 20px;margin-top:18px;font-size:13px;line-height:1.8}
 #affiliations sup{font-size:9px}
+.author-roles{margin-top:12px;color:var(--muted);font-size:12px;line-height:1.8;text-wrap:balance}
+.author-roles span{white-space:nowrap}
 @media(max-width:550px){.hero #affiliations{gap:5px 14px;font-size:11px}.hero #authors{font-size:13px;gap:6px 16px}}
 :root{--nav-height:60px}
 html{scroll-padding-top:calc(var(--nav-height) + 12px)}

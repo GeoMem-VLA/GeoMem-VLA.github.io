@@ -144,7 +144,7 @@ if (config.authors?.length) {
     const url=safeURL(author.url),name=document.createElement(url?'a':'span');
     name.textContent=author.name;
     if(url){name.href=url;name.target='_blank';name.rel='noopener';}
-    if(author.affiliation){const sup=document.createElement('sup');sup.textContent=author.affiliation;name.append(sup);}
+    if(author.affiliation||author.marker){const sup=document.createElement('sup');sup.textContent=(author.affiliation||'')+(author.marker||'');name.append(sup);}
     $('#authors').append(name);
   });
 }
