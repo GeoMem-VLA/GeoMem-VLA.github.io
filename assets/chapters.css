@@ -1,29 +1,29 @@
 /* Continuous paper layout: generous sections, native scrolling, gentle reveals. */
 .resource-emoji{font-size:21px;line-height:1}
 .citation-placeholder{text-align:center;padding:24px;background:#f7f8fa;border-radius:5px;color:var(--muted);font-size:14px}
-.hero #authors{max-width:1040px;font-size:15px;gap:6px 16px}
+.hero #authors{max-width:760px;font-size:16px;gap:8px 18px}
 #authors>span,#authors>a{white-space:nowrap}
-.hero #affiliations{max-width:940px;display:flex;justify-content:center;flex-wrap:wrap;gap:5px 20px;margin-top:18px;font-size:13px;line-height:1.8}
-#affiliations sup{font-size:9px}
-.author-roles{margin-top:12px;color:var(--muted);font-size:12px;line-height:1.8;text-wrap:balance}
+.hero #affiliations{max-width:940px;display:flex;justify-content:center;flex-wrap:wrap;gap:5px 20px;margin-top:18px;font-size:14px;line-height:1.8}
+#affiliations sup{font-size:10px}
+.author-roles{margin-top:12px;color:var(--muted);font-size:13px;line-height:1.8;text-wrap:balance}
 .author-roles span{white-space:nowrap}
-@media(max-width:550px){.hero #affiliations{gap:5px 14px;font-size:11px}.hero #authors{font-size:13px;gap:6px 16px}}
-:root{--nav-height:60px}
+@media(max-width:550px){.hero #affiliations{gap:6px 14px;font-size:13px}.hero #authors{font-size:15px;gap:8px 16px}}
+:root{--nav-height:68px}
 html{scroll-padding-top:calc(var(--nav-height) + 12px)}
 .site-nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid #eceef1}
 .nav-inner{max-width:1136px;margin:auto;padding:0 48px;min-height:var(--nav-height);display:flex;align-items:center;justify-content:space-between;gap:28px}
-.nav-brand{font-size:16px;font-weight:700;letter-spacing:-.035em;white-space:nowrap}
+.nav-brand{font-size:18px;font-weight:700;letter-spacing:-.035em;white-space:nowrap}
 .nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a{position:relative;padding:18px 0;font-size:13px;line-height:24px;color:#737b84;white-space:nowrap;transition:color .15s}
+.nav-links a{position:relative;padding:22px 0;font-size:15px;line-height:24px;color:#737b84;white-space:nowrap;transition:color .15s}
 .nav-links a:hover,.nav-links a[aria-current="location"]{color:var(--accent)}
 .nav-links a[aria-current="location"]::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent)}
-@media(max-width:800px){
- :root{--nav-height:88px}
+@media(max-width:900px){
+ :root{--nav-height:94px}
  .nav-inner{padding:0 20px;gap:0;align-items:flex-start;flex-direction:column}
- .nav-brand{font-size:14px;line-height:40px}
+ .nav-brand{font-size:16px;line-height:44px}
  .nav-links{width:100%;justify-content:space-between;gap:16px;overflow-x:auto;scrollbar-width:none}
  .nav-links::-webkit-scrollbar{display:none}
- .nav-links a{font-size:12px;padding:10px 0 12px;line-height:24px}
+ .nav-links a{font-size:14px;padding:12px 0 14px;line-height:24px}
 }
 .case-slot{width:100%;max-width:960px;margin:0 auto}
 .case-placeholder{height:clamp(180px,27vh,290px);display:grid;place-items:center;background:#f7f8fa;border:1px dashed #d6dce2;border-radius:8px;color:#929aa3;font-size:15px;letter-spacing:.01em}
@@ -35,7 +35,7 @@ html{scroll-padding-top:calc(var(--nav-height) + 12px)}
 .chapter-scroll{padding:64px 48px}
 .chapter-content{width:100%;max-width:1040px;min-height:0;margin:auto;display:flex;flex-direction:column;justify-content:center;align-items:stretch}
 .chapter-content>*{flex-shrink:0}
-.flow-mode .chapter h2{font-size:clamp(25px,2.5vw,32px);margin:0 0 30px}
+.flow-mode .chapter h2{font-size:clamp(27px,2.7vw,34px);margin:0 0 30px}
 .flow-mode .chapter.has-entered:not(:has(video)) .chapter-content{animation:content-enter .65s cubic-bezier(.2,.65,.3,1)}
 .flow-mode .hero .chapter-content{align-items:center;min-height:calc(76svh - 128px)}
 .flow-mode .hero{min-height:76svh}
@@ -43,22 +43,22 @@ html{scroll-padding-top:calc(var(--nav-height) + 12px)}
 .flow-mode #overview .zoomable{display:flex;justify-content:center}
 .flow-mode #overview img{width:auto;max-width:100%;max-height:75svh;object-fit:contain}
 .flow-mode .abstract .chapter-content{max-width:940px}
-.flow-mode .abstract p{font-size:clamp(15px,1.5vw,17px);line-height:1.85}
+.flow-mode .abstract p{font-size:clamp(17px,1.6vw,18px);line-height:1.85}
 .method-layout{display:grid;grid-template-columns:1fr;align-items:center;gap:32px}
 .method-layout .figure{width:100%;max-width:960px}
 .method-layout .method-description{grid-template-columns:repeat(4,1fr);gap:24px;margin:0;max-width:none}
-.method-layout .method-description h3{font-size:16px;margin-bottom:7px}
-.method-layout .method-description p{font-size:13px;line-height:1.75}
+.method-layout .method-description h3{font-size:18px;margin-bottom:7px}
+.method-layout .method-description p{font-size:15px;line-height:1.75}
 .flow-mode .task-gallery{width:min(900px,100%)}
 .flow-mode .task-gallery .pager{margin-top:18px}
-.flow-mode .task-gallery .task h3{margin-top:16px;font-size:18px}
+.flow-mode .task-gallery .task h3{margin-top:16px;font-size:20px}
 .flow-mode #real-world .note{margin-top:16px}
 .flow-mode #results .tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:min(620px,100%);gap:6px;padding:6px;margin:0 auto 24px;background:#edf1f5;border:1px solid #d5dde5;border-radius:10px}
-#results .tabs button{min-height:50px;padding:12px 14px;border:1px solid #dbe2e8;border-radius:6px;background:#fff;color:#4b5967;font-size:15px;font-weight:600;line-height:1.4;transition:background .16s,color .16s,border-color .16s}
+#results .tabs button{min-height:50px;padding:12px 14px;border:1px solid #dbe2e8;border-radius:6px;background:#fff;color:#4b5967;font-size:16px;font-weight:600;line-height:1.4;transition:background .16s,color .16s,border-color .16s}
 #results .tabs button:hover{background:#e1e9f0;border-color:#8fa4b6;color:#29485f}
 #results .tabs button[aria-selected=true]{background:#49677c;border-color:#49677c;color:#fff;box-shadow:0 2px 5px #243c5120}
 #results .tabs button:focus-visible{outline:2px solid #29485f;outline-offset:2px}
-@media(max-width:550px){#results .tabs button{min-height:48px;padding:10px 5px;font-size:12px}.flow-mode #results .tabs{gap:4px;padding:4px;margin-bottom:20px}}
+@media(max-width:550px){#results .tabs button{min-height:48px;padding:10px 5px;font-size:14px}.flow-mode #results .tabs{gap:4px;padding:4px;margin-bottom:20px}}
 @media(prefers-reduced-motion:reduce){#results .tabs button{transition:none}}
 .flow-mode #results .caption{margin-top:0}
 .flow-mode footer{margin-top:0}
@@ -76,11 +76,11 @@ html{scroll-padding-top:calc(var(--nav-height) + 12px)}
  .flow-mode .chapter{min-height:0}
  .flow-mode .hero .chapter-content{min-height:calc(70svh - 80px)}
  .flow-mode .hero{min-height:70svh}
- .flow-mode .abstract p{text-align:left;font-size:15px;line-height:1.8}
- .method-layout .method-description{grid-template-columns:1fr;gap:20px}.method-layout .method-description p{font-size:14px}
+ .flow-mode .abstract p{text-align:left;font-size:16px;line-height:1.8}
+ .method-layout .method-description{grid-template-columns:1fr;gap:20px}.method-layout .method-description p{font-size:15px}
  .flow-mode .task-gallery{width:100%}
- .flow-mode .task-gallery .task h3{font-size:16px}
- .flow-mode .task-gallery .task figcaption p{font-size:10px}
+ .flow-mode .task-gallery .task h3{font-size:18px}
+ .flow-mode .task-gallery .task figcaption p{font-size:13px}
  .case-placeholder{height:220px;min-height:0;font-size:14px}
 }
 @media(max-height:550px) and (min-width:551px){
@@ -96,3 +96,21 @@ html{scroll-padding-top:calc(var(--nav-height) + 12px)}
 
 .flow-mode .real-world-summary{width:100%;margin:0 auto 30px}
 @media(max-width:550px){.flow-mode .real-world-summary{margin-bottom:22px}}
+
+/* Reading scale: keep supporting text legible without enlarging the hero. */
+body{font-size:17px}
+.resource{font-size:15px}
+.resource small{font-size:11px}
+.figure figcaption,.caption,.note,.task-gallery .task figcaption p{font-size:14px}
+table{font-size:15px}
+thead{font-size:14px}
+th,td{padding:13px 16px}
+tr.ours th span{font-size:12px}
+.pager .page-count{font-size:14px}
+.citation-placeholder,footer{font-size:14px}
+@media(max-width:650px){
+ .resource{font-size:14px}.resource small{font-size:10px}
+ .figure figcaption,.caption,.note{font-size:13px}
+ .table-scroll table{font-size:14px}thead{font-size:13px}
+ th,td{padding:12px 13px}
+}
