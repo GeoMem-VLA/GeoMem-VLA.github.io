@@ -171,6 +171,8 @@ for (const [key,path] of Object.entries(config.videos||{})) {
   const video=document.createElement('video');
   video.className='media-video';video.controls=true;video.playsInline=true;video.preload='metadata';video.src=url;
   video.muted=true;video.defaultMuted=true;video.loop=true;
+  const playbackRate=(config.videoSpeeds?.[key]||1)/(config.videoEncodedSpeeds?.[key]||1);
+  video.defaultPlaybackRate=playbackRate;video.playbackRate=playbackRate;
   video.setAttribute('aria-label',`${key} demonstration video`);
   const still=$('img',slot);video.poster=safeURL(config.posters?.[key])||still?.src||'';
   if(slot.classList.contains('task-media')){

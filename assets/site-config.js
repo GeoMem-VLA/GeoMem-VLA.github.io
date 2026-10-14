@@ -29,6 +29,7 @@ window.GEOMEM_CONFIG = {
     cube: null, apple: null
   },
   posters: {sticks: 'assets/images/video-sticks.webp', cup: 'assets/images/video-cup.webp', pockets: 'assets/images/video-pockets.webp'},
-  videoSpeeds: {sticks: 4, cup: 4, pockets: 4}, // Encoded speed relative to the uploaded files.
+  videoSpeeds: {sticks: 2, cup: 2, pockets: 2}, // Displayed speed relative to the original recording.
+  videoEncodedSpeeds: {sticks: 4, cup: 4, pockets: 4}, // Speed already encoded in the MP4 files.
   bibtex: null // Add the official entry when publication metadata is available.
 };
