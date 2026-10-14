@@ -3,8 +3,8 @@ window.GEOMEM_CONFIG = {
   authors: [
     { name: 'Qinfan Zhang', affiliation: '1,5', marker: '†' },
     { name: 'Yifan Luo', affiliation: '2,5', marker: '†' },
-    { name: 'Haoyuan Shi', affiliation: '3,5', marker: '†' },
-    { name: 'Guanlin Liu', affiliation: '4,5', marker: '†' },
+    { name: 'Haoyuan Shi', affiliation: '3,5' },
+    { name: 'Guanlin Liu', affiliation: '4,5' },
     { name: 'Han Dong', affiliation: '5' },
     { name: 'Haozhe Shan', affiliation: '5,6' },
     { name: 'Yong Dai', affiliation: '5' },
