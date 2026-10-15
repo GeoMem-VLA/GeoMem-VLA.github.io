@@ -18,7 +18,7 @@ Run `python -m http.server 8000 --bind 127.0.0.1` and open http://127.0.0.1:8000
 - `assets/images/` and `assets/videos/`: published media only.
 - `assets/icons/README.md`: icon sources and licenses.
 
-The reconstruction, EEF, and memory sections use curated static case panels from RoboTwin simulation runs. The analysis sections intentionally exclude AGX real-robot cases for now. Published case images and lightweight metadata live under `assets/images/cases/` and `assets/data/`; raw checkpoints, NPZ files, and extraction scripts stay outside this repository. Real-world videos are encoded at 4× speed, play muted on entering view, loop, and pause when hidden. `videoSpeeds` sets the effective playback speed (currently 2×); `videoEncodedSpeeds` records the 4× speed already baked into the files. The player uses their ratio.
+The reconstruction, EEF, and memory sections use curated static case panels from RoboTwin simulation runs. The analysis sections intentionally exclude AGX real-robot cases for now. Published case images and lightweight metadata live under `assets/images/cases/` and `assets/data/`; raw checkpoints, NPZ files, and extraction scripts stay outside this repository. Real-world videos are encoded at 2× speed, play muted on entering view, loop, and pause when hidden. `videoSpeeds` sets the effective playback speed (currently 2×); `videoEncodedSpeeds` records the 2× speed already baked into the files. The player uses their ratio.
 
 ## Deployment
 
