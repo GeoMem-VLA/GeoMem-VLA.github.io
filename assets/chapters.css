@@ -5,16 +5,16 @@
 #authors>span,#authors>a{white-space:nowrap}
 .hero #affiliations{max-width:940px;display:flex;justify-content:center;flex-wrap:wrap;gap:5px 20px;margin-top:18px;font-size:14px;line-height:1.8}
 #affiliations sup{font-size:10px}
-.author-roles{margin-top:12px;color:var(--muted);font-size:13px;line-height:1.8;text-wrap:balance}
+.author-roles{margin-top:12px;color:var(--muted);font-size:14px;line-height:1.8;text-wrap:balance}
 .author-roles span{white-space:nowrap}
 @media(max-width:550px){.hero #affiliations{gap:6px 14px;font-size:13px}.hero #authors{font-size:15px;gap:8px 16px}}
 :root{--nav-height:68px}
 html{scroll-padding-top:calc(var(--nav-height) + 12px)}
-.site-nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid #eceef1}
+.site-nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #eceef1}
 .nav-inner{max-width:1136px;margin:auto;padding:0 48px;min-height:var(--nav-height);display:flex;align-items:center;justify-content:space-between;gap:28px}
 .nav-brand{font-size:18px;font-weight:700;letter-spacing:-.035em;white-space:nowrap}
 .nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a{position:relative;padding:22px 0;font-size:15px;line-height:24px;color:#737b84;white-space:nowrap;transition:color .15s}
+.nav-links a{position:relative;padding:22px 0;font-size:15px;line-height:24px;color:#4b5967;white-space:nowrap;transition:color .15s}
 .nav-links a:hover,.nav-links a[aria-current="location"]{color:var(--accent)}
 .nav-links a[aria-current="location"]::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent)}
 @media(max-width:900px){
@@ -26,7 +26,7 @@ html{scroll-padding-top:calc(var(--nav-height) + 12px)}
  .nav-links a{font-size:14px;padding:12px 0 14px;line-height:24px}
 }
 .case-slot{width:100%;max-width:960px;margin:0 auto}
-.case-placeholder{height:clamp(180px,27vh,290px);display:grid;place-items:center;background:#f7f8fa;border:1px dashed #d6dce2;border-radius:8px;color:#929aa3;font-size:15px;letter-spacing:.01em}
+.case-placeholder{height:clamp(180px,27vh,290px);display:grid;place-items:center;background:#f7f8fa;border:1px dashed #d6dce2;border-radius:8px;color:#56616d;font-size:15px;letter-spacing:.01em}
 /* Avoid transform animations on ancestors of playing video surfaces. */
 .task-gallery .gallery-slide:not([hidden]){animation:none}
 .task-gallery .gallery-slide:not([hidden]) figcaption{animation:content-enter .3s ease-out}
@@ -48,7 +48,7 @@ html{scroll-padding-top:calc(var(--nav-height) + 12px)}
 .method-layout .figure{width:100%;max-width:960px}
 .method-layout .method-description{grid-template-columns:repeat(4,1fr);gap:24px;margin:0;max-width:none}
 .method-layout .method-description h3{font-size:18px;margin-bottom:7px}
-.method-layout .method-description p{font-size:15px;line-height:1.75}
+.method-layout .method-description p{font-size:16px;line-height:1.75}
 .flow-mode .task-gallery{width:min(900px,100%)}
 .flow-mode .task-gallery .pager{margin-top:18px}
 .flow-mode .task-gallery .task h3{margin-top:16px;font-size:20px}
@@ -77,7 +77,7 @@ html{scroll-padding-top:calc(var(--nav-height) + 12px)}
  .flow-mode .hero .chapter-content{min-height:calc(70svh - 80px)}
  .flow-mode .hero{min-height:70svh}
  .flow-mode .abstract p{text-align:left;font-size:16px;line-height:1.8}
- .method-layout .method-description{grid-template-columns:1fr;gap:20px}.method-layout .method-description p{font-size:15px}
+ .method-layout .method-description{grid-template-columns:1fr;gap:20px}.method-layout .method-description p{font-size:16px}
  .flow-mode .task-gallery{width:100%}
  .flow-mode .task-gallery .task h3{font-size:18px}
  .flow-mode .task-gallery .task figcaption p{font-size:13px}
@@ -101,16 +101,16 @@ html{scroll-padding-top:calc(var(--nav-height) + 12px)}
 body{font-size:17px}
 .resource{font-size:15px}
 .resource small{font-size:11px}
-.figure figcaption,.caption,.note,.task-gallery .task figcaption p{font-size:14px}
-table{font-size:15px}
-thead{font-size:14px}
+.figure figcaption,.caption,.note,.task-gallery .task figcaption p{font-size:15px}
+table{font-size:16px}
+thead{font-size:15px}
 th,td{padding:13px 16px}
 tr.ours th span{font-size:12px}
 .pager .page-count{font-size:14px}
 .citation-placeholder,footer{font-size:14px}
 @media(max-width:650px){
  .resource{font-size:14px}.resource small{font-size:10px}
- .figure figcaption,.caption,.note{font-size:13px}
- .table-scroll table{font-size:14px}thead{font-size:13px}
+ .figure figcaption,.caption,.note{font-size:14px}
+ .table-scroll table{font-size:15px}thead{font-size:14px}
  th,td{padding:12px 13px}
 }
