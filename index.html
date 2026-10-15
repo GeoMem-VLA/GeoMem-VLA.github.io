@@ -13,9 +13,11 @@
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="assets/style.css?v=20261013-bold-results">
   <link rel="stylesheet" href="assets/chapters.css?v=20261014-readability">
+  <link rel="stylesheet" href="assets/cases.css?v=20261015-four-cases">
   <script src="assets/site-config.js?v=20261014-2x" defer></script>
   <script src="assets/main.js?v=20261014-2x" defer></script>
   <script src="assets/chapters.js?v=20261013-citation-nav" defer></script>
+  <script src="assets/cases.js?v=20261015-four-cases" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#overview">Skip to content</a>
@@ -64,15 +66,105 @@
     </section>
     <section id="geometry" class="section">
       <h2>3D Reconstruction</h2>
-      <div class="case-slot" data-media-slot="reconstruction"><div class="case-placeholder"><span>Cases coming soon</span></div></div>
+      <div class="case-intro">
+        <p class="case-kicker">Training-time geometric supervision</p>
+        <p>GeoPlan tokens learn a compact, task-relevant 3D description from a frozen VGGT teacher. These four RoboTwin simulation cases compare the 256-point teacher target, the student reconstruction, and the point-wise error across three views.</p>
+      </div>
+      <div class="case-showcase" data-case-showcase="geometry">
+        <div class="case-toolbar" role="tablist" aria-label="3D reconstruction cases">
+          <button type="button" role="tab" aria-selected="true" data-case-tab="clean-microwave">Clean open microwave</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="blocks">Stack three blocks</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="microwave">Open microwave</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="laptop">Open laptop</button>
+        </div>
+        <div class="case-panels">
+          <article class="case-panel" data-case-panel="clean-microwave">
+          <div class="case-panel-head"><div><span class="case-label">RoboTwin · Clean</span><h3>Clean open microwave</h3></div><span class="case-metric">t=0</span></div>
+          <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/geometry-sim/clean-open-microwave-t0000-pointmap.png" aria-label="Enlarge clean open microwave point map reconstruction"><img src="assets/images/cases/geometry-sim/clean-open-microwave-t0000-pointmap.png" width="1755" height="1676" loading="lazy" alt="Clean open microwave teacher target, GeoPlan reconstruction, and point error"></button><figcaption>Clean scene · three views · 256 patch-colored points</figcaption></figure>
+        </article>
+          <article class="case-panel" data-case-panel="blocks" hidden>
+          <div class="case-panel-head"><div><span class="case-label">RoboTwin · Randomized</span><h3>Stack three blocks</h3></div><span class="case-metric">t=126</span></div>
+          <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/geometry-sim/stack-blocks-randomized-t0126-pointmap.png" aria-label="Enlarge stack three blocks point map reconstruction"><img src="assets/images/cases/geometry-sim/stack-blocks-randomized-t0126-pointmap.png" width="1755" height="1676" loading="lazy" alt="Stack three blocks teacher target, GeoPlan reconstruction, and point error"></button><figcaption>Multi-stage stacking · three views · normalized point-map error</figcaption></figure>
+        </article>
+          <article class="case-panel" data-case-panel="microwave" hidden>
+          <div class="case-panel-head"><div><span class="case-label">RoboTwin · Randomized</span><h3>Open microwave</h3></div><span class="case-metric">t=0</span></div>
+          <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/geometry-sim/open-microwave-randomized-t0000-pointmap.png" aria-label="Enlarge open microwave point map reconstruction"><img src="assets/images/cases/geometry-sim/open-microwave-randomized-t0000-pointmap.png" width="1755" height="1676" loading="lazy" alt="Open microwave teacher target, GeoPlan reconstruction, and point error"></button><figcaption>Randomized scene · three views · normalized point-map error</figcaption></figure>
+        </article>
+          <article class="case-panel" data-case-panel="laptop" hidden>
+          <div class="case-panel-head"><div><span class="case-label">RoboTwin · Randomized</span><h3>Open laptop</h3></div><span class="case-metric">t=0</span></div>
+          <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/geometry-sim/open-laptop-randomized-t0000-pointmap.png" aria-label="Enlarge open laptop point map reconstruction"><img src="assets/images/cases/geometry-sim/open-laptop-randomized-t0000-pointmap.png" width="1755" height="1676" loading="lazy" alt="Open laptop teacher target, GeoPlan reconstruction, and point error"></button><figcaption>Randomized scene · three views · normalized point-map error</figcaption></figure>
+        </article>
+        </div>
+      </div>
+      <p class="case-source">All examples in this section are RoboTwin simulation cases. The point-wise error is shown in normalized point-map units; the frozen teacher is used only for training supervision.</p>
     </section>
     <section id="eef" class="section">
       <h2>EEF Track Prediction</h2>
-      <div class="case-slot" data-media-slot="eef"><div class="case-placeholder"><span>Cases coming soon</span></div></div>
+      <div class="case-intro">
+        <p class="case-kicker">Future end-effector waypoints</p>
+        <p>The same geometric head predicts a 50-step future track for each arm. Reference paths are dashed and model predictions are solid. The right-hand plot reports per-waypoint 3D error in centimetres.</p>
+      </div>
+      <div class="case-showcase" data-case-showcase="eef">
+        <div class="case-toolbar" role="tablist" aria-label="EEF prediction cases">
+          <button type="button" role="tab" aria-selected="true" data-case-tab="clean-microwave">Clean open microwave</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="blocks">Stack three blocks</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="microwave">Open microwave</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="laptop">Open laptop</button>
+        </div>
+        <div class="case-panels">
+          <article class="case-panel" data-case-panel="clean-microwave">
+            <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/eef-original/clean-open-microwave-t0000-eef.png" aria-label="Enlarge clean open microwave EEF track prediction"><img src="assets/images/cases/eef-original/clean-open-microwave-t0000-eef.png" width="2288" height="676" loading="lazy" alt="Clean open microwave EEF track prediction"></button><figcaption>Clean RoboTwin · original case export · frame 0</figcaption></figure>
+          </article>
+          <article class="case-panel" data-case-panel="blocks" hidden>
+            <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/eef-original/stack-blocks-randomized-t0126-eef.png" aria-label="Enlarge stack three blocks EEF track prediction"><img src="assets/images/cases/eef-original/stack-blocks-randomized-t0126-eef.png" width="2288" height="676" loading="lazy" alt="Randomized stack three blocks EEF track prediction"></button><figcaption>Randomized RoboTwin · original case export · frame 126</figcaption></figure>
+          </article>
+          <article class="case-panel" data-case-panel="microwave" hidden>
+            <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/eef-original/open-microwave-randomized-t0000-eef.png" aria-label="Enlarge open microwave EEF track prediction"><img src="assets/images/cases/eef-original/open-microwave-randomized-t0000-eef.png" width="2288" height="676" loading="lazy" alt="Randomized open microwave EEF track prediction"></button><figcaption>Randomized RoboTwin · original case export · frame 0</figcaption></figure>
+          </article>
+          <article class="case-panel" data-case-panel="laptop" hidden>
+            <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/eef-original/open-laptop-randomized-t0000-eef.png" aria-label="Enlarge open laptop EEF track prediction"><img src="assets/images/cases/eef-original/open-laptop-randomized-t0000-eef.png" width="2288" height="676" loading="lazy" alt="Randomized open laptop EEF track prediction"></button><figcaption>Randomized RoboTwin · original case export · frame 0</figcaption></figure>
+          </article>
+        </div>
+        <p class="case-source">EEF tracks are an auxiliary training target. The panels report saved model outputs on the same four RoboTwin simulation cases shown in 3D Reconstruction.</p>
+      </div>
     </section>
     <section id="memory" class="section">
       <h2>Memory Bank &amp; Event Frames</h2>
-      <div class="case-slot" data-media-slot="memory"><div class="case-placeholder"><span>Cases coming soon</span></div></div>
+      <div class="case-intro">
+        <p class="case-kicker">Causal retrieval and event consolidation</p>
+        <p>Observation and geometric banks read earlier frames, then consolidate similar neighbours when the memory is full. The supplied panels show RGB frames, Obs. Mem, Geo. Mem, shaded shared bands, and enlarged event frames selected by the intersection of both banks.</p>
+      </div>
+      <div class="case-showcase" data-case-showcase="memory">
+        <div class="case-toolbar" role="tablist" aria-label="Memory bank cases">
+          <button type="button" role="tab" aria-selected="true" data-case-tab="clean-microwave">Clean open microwave</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="blocks">Stack three blocks</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="microwave">Open microwave</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="laptop">Open laptop</button>
+        </div>
+        <div class="case-panels">
+          <article class="case-panel" data-case-panel="clean-microwave">
+            <div class="case-panel-head"><div><span class="case-label">RoboTwin · Clean simulation</span><h3>Clean open microwave</h3></div></div>
+            <figure class="case-figure memory-paper-figure"><button class="zoomable" data-zoom="assets/images/cases/memory-sim/clean-open-microwave-event-frames-panel.png" aria-label="Enlarge clean open microwave memory and event frames"><img src="assets/images/cases/memory-sim/clean-open-microwave-event-frames-panel.png" width="5216" height="1763" loading="lazy" alt="RGB sequence, observation memory, geometric memory, shaded shared bands, and enlarged event frames for clean open microwave"></button><figcaption>RGB sequence · Obs. Mem · Geo. Mem · shaded shared event/key frames</figcaption></figure>
+            <p class="case-note">Shared shaded bands mark frames retained by both memory banks; the corresponding event frames are enlarged below.</p>
+          </article>
+          <article class="case-panel" data-case-panel="blocks" hidden>
+            <div class="case-panel-head"><div><span class="case-label">RoboTwin · Randomized simulation</span><h3>Stack three blocks</h3></div></div>
+            <figure class="case-figure memory-paper-figure"><button class="zoomable" data-zoom="assets/images/cases/memory-sim/stack-blocks-randomized-event-frames-panel.png" aria-label="Enlarge stack three blocks memory and event frames"><img src="assets/images/cases/memory-sim/stack-blocks-randomized-event-frames-panel.png" width="4066" height="1838" loading="lazy" alt="RGB sequence, observation memory, geometric memory, shaded shared bands, and enlarged event frames for stacking three blocks"></button><figcaption>RGB sequence · Obs. Mem · Geo. Mem · shaded shared event/key frames</figcaption></figure>
+            <p class="case-note">Shared shaded bands mark frames retained by both memory banks; the corresponding event frames are enlarged below.</p>
+          </article>
+          <article class="case-panel" data-case-panel="microwave" hidden>
+            <div class="case-panel-head"><div><span class="case-label">RoboTwin · Randomized simulation</span><h3>Open microwave</h3></div></div>
+            <figure class="case-figure memory-paper-figure"><button class="zoomable" data-zoom="assets/images/cases/memory-sim/open-microwave-randomized-event-frames-panel.png" aria-label="Enlarge open microwave memory and event frames"><img src="assets/images/cases/memory-sim/open-microwave-randomized-event-frames-panel.png" width="5216" height="1763" loading="lazy" alt="RGB sequence, observation memory, geometric memory, shaded shared bands, and enlarged event frames for opening a microwave"></button><figcaption>RGB sequence · Obs. Mem · Geo. Mem · shaded shared event/key frames</figcaption></figure>
+            <p class="case-note">Shared shaded bands mark frames retained by both memory banks; the corresponding event frames are enlarged below.</p>
+          </article>
+          <article class="case-panel" data-case-panel="laptop" hidden>
+            <div class="case-panel-head"><div><span class="case-label">RoboTwin · Randomized simulation</span><h3>Open laptop</h3></div></div>
+            <figure class="case-figure memory-paper-figure"><button class="zoomable" data-zoom="assets/images/cases/memory-sim/open-laptop-randomized-event-frames-panel.png" aria-label="Enlarge open laptop memory and event frames"><img src="assets/images/cases/memory-sim/open-laptop-randomized-event-frames-panel.png" width="5216" height="1763" loading="lazy" alt="RGB sequence, observation memory, geometric memory, shaded shared bands, and enlarged event frames for opening a laptop"></button><figcaption>RGB sequence · Obs. Mem · Geo. Mem · shaded shared event/key frames</figcaption></figure>
+            <p class="case-note">Shared shaded bands mark frames retained by both memory banks; the corresponding event frames are enlarged below.</p>
+          </article>
+        </div>
+        <p class="case-source">Simulation cases only. All three analysis modules use the same four tasks in the same order.</p>
+      </div>
     </section>
     <section id="results" class="section">
       <h2>Experiment Results</h2>

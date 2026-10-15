@@ -1,0 +1,77 @@
+{
+  "source": "docs/case_results",
+  "cases": [
+    {
+      "case": "Clean_open_microwave_ep000",
+      "frame": 0,
+      "assets": {
+        "geometry/t0000_pointmap.png": {
+          "path": "assets/images/cases/geometry-sim/clean-open-microwave-t0000-pointmap.png",
+          "sha256": "e478fad611eb3ce0df50a642913c7a55c7e22d8137ac0ca7a24021364fe6d10f"
+        },
+        "geometry/t0000_eef_waypoints.png": {
+          "path": "assets/images/cases/eef-original/clean-open-microwave-t0000-eef.png",
+          "sha256": "e82d904013ae0319e179c76c73c889914311030d8ffe8c546a2a0d8450a62284"
+        },
+        "memory/event_frames_panel.png": {
+          "path": "assets/images/cases/memory-sim/clean-open-microwave-event-frames-panel.png",
+          "sha256": "e39ab16221c1bca0b63ee339da25add89bec2e359e2cc8e84b38a0a121f9f36f"
+        }
+      }
+    },
+    {
+      "case": "Randomized_stack_blocks_three_ep000",
+      "frame": 126,
+      "assets": {
+        "geometry/t0126_pointmap.png": {
+          "path": "assets/images/cases/geometry-sim/stack-blocks-randomized-t0126-pointmap.png",
+          "sha256": "1f1275b2092fba8919cd49cfc5f7079ea5ee6f272ae7df21bbabfce2216c2a06"
+        },
+        "geometry/t0126_eef_waypoints.png": {
+          "path": "assets/images/cases/eef-original/stack-blocks-randomized-t0126-eef.png",
+          "sha256": "9f42c39dab3ebb061d40bc7f0b9ddc45a4fea4f951a24b394ad7e071a4fca5b6"
+        },
+        "memory/event_frames_panel.png": {
+          "path": "assets/images/cases/memory-sim/stack-blocks-randomized-event-frames-panel.png",
+          "sha256": "69a83b0f2a3b032335dc3dc50dfcb64e57440936f3f725e3e31e729059b54b13"
+        }
+      }
+    },
+    {
+      "case": "Randomized_open_microwave_ep000",
+      "frame": 0,
+      "assets": {
+        "geometry/t0000_pointmap.png": {
+          "path": "assets/images/cases/geometry-sim/open-microwave-randomized-t0000-pointmap.png",
+          "sha256": "a991555d702281221f410b76b5d437d5bd51c2d3e98902b8b7a39afdc51f5b65"
+        },
+        "geometry/t0000_eef_waypoints.png": {
+          "path": "assets/images/cases/eef-original/open-microwave-randomized-t0000-eef.png",
+          "sha256": "7f1bb8cfc949840a55e5b71673ad738f3ae2d5c195947cf6fe6e137ebfc0d579"
+        },
+        "memory/event_frames_panel.png": {
+          "path": "assets/images/cases/memory-sim/open-microwave-randomized-event-frames-panel.png",
+          "sha256": "92e7ae96371984676b0946a2c6eacaf131b153e3d6a2e7e439b2e4dee5a6e005"
+        }
+      }
+    },
+    {
+      "case": "Randomized_open_laptop_ep000",
+      "frame": 0,
+      "assets": {
+        "geometry/t0000_pointmap.png": {
+          "path": "assets/images/cases/geometry-sim/open-laptop-randomized-t0000-pointmap.png",
+          "sha256": "ad61450db7dd456e659dc11f91d17e7b05a43854fafb83ffabf002c7a0253446"
+        },
+        "geometry/t0000_eef_waypoints.png": {
+          "path": "assets/images/cases/eef-original/open-laptop-randomized-t0000-eef.png",
+          "sha256": "44f0c5a5151c94a9472a9200220bfc1bdbcf3075bb50c48604b2be5e6a145555"
+        },
+        "memory/event_frames_panel.png": {
+          "path": "assets/images/cases/memory-sim/open-laptop-randomized-event-frames-panel.png",
+          "sha256": "3038382b06def4dad7e85c728bfbbf5fa55aca684bf45e9b8da0d788c7194cc8"
+        }
+      }
+    }
+  ]
+}

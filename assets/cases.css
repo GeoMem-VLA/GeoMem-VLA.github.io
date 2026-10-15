@@ -1,0 +1,51 @@
+/* Case studies: the same quiet paper palette, with just enough framing to
+   separate a result from its explanatory copy. */
+.case-intro{width:min(800px,100%);margin:0 auto 28px;text-align:center}
+.case-intro .case-kicker{margin-bottom:7px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.case-intro>p:last-child{color:#59616a;font-size:16px;line-height:1.75}
+.case-showcase{width:min(960px,100%);margin:0 auto}
+.case-toolbar{display:flex;justify-content:center;gap:8px;margin:0 auto 25px;padding:5px;background:#f1f4f6;border:1px solid #dde3e8;border-radius:9px;width:max-content;max-width:100%;overflow:auto}
+.case-toolbar button{border:1px solid transparent;border-radius:6px;background:transparent;padding:10px 16px;color:#67727d;font-size:14px;line-height:1.35;white-space:nowrap;transition:background .15s,color .15s,border-color .15s}
+.case-toolbar button:hover{color:#29485f;background:#e6edf2}
+.case-toolbar button[aria-selected=true]{background:#fff;border-color:#c9d4dc;color:var(--accent);font-weight:700;box-shadow:0 1px 3px #243c5112}
+.case-panel{animation:case-enter .28s ease-out}
+.case-panel-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin:0 0 14px;padding:0 3px}
+.case-label{display:block;margin-bottom:4px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.case-panel h3{font-size:22px;font-weight:650;letter-spacing:-.02em}
+.case-metric{flex:0 0 auto;border:1px solid #d6e0e6;border-radius:999px;padding:5px 10px;color:#566977;background:#f7fafb;font-size:12px;line-height:1.2;font-variant-numeric:tabular-nums}
+.case-figure{overflow:hidden;border:1px solid #e0e5e9;border-radius:10px;background:#fafbfc;box-shadow:0 5px 18px #243c5109}
+.case-figure .zoomable{display:block;width:100%;padding:0;border:0;background:#fafbfc;cursor:zoom-in}
+.case-figure img{width:100%;height:auto;object-fit:contain}
+.case-figure figcaption{padding:10px 14px 11px;background:#fff;color:#79838d;font-size:13px;line-height:1.5;text-align:left}
+.memory-paper-figure figcaption{text-align:center}
+.case-note{max-width:780px;margin:17px auto 0;color:#59616a;font-size:15px;line-height:1.75;text-align:center}
+.case-source{margin:18px 0 0;color:#848c94;font-size:12px;line-height:1.65;text-align:center}
+.geometry-overview{margin:0 auto 26px}
+.geometry-overview figcaption{text-align:center}
+.geometry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px}
+.geometry-card{min-width:0}
+.geometry-card .case-panel-head{align-items:flex-start;min-height:58px;margin-bottom:10px}
+.geometry-card .case-panel h3{font-size:19px}
+.geometry-card .case-figure{border-radius:8px}
+.geometry-card .case-figure figcaption{font-size:12px;text-align:center;padding:8px 10px}
+.memory-figures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.memory-figures .case-figure figcaption{text-align:center;padding-block:8px}
+.event-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:16px}
+.event-strip figure{overflow:hidden;border:1px solid #e0e5e9;border-radius:7px;background:#fff}
+.event-strip button{display:block;width:100%;padding:0;border:0;background:#f6f8f9;cursor:zoom-in}
+.event-strip img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.event-strip figcaption{padding:4px 6px 5px;color:#7a848d;font-size:11px;text-align:center;font-variant-numeric:tabular-nums}
+@keyframes case-enter{from{opacity:.35;translate:0 7px}to{opacity:1;translate:0 0}}
+@media(max-width:700px){
+ .case-intro>p:last-child{font-size:15px;line-height:1.7}
+ .case-toolbar{justify-content:flex-start;width:100%;border-radius:8px}
+ .case-toolbar button{padding:9px 12px;font-size:13px}
+ .case-panel-head{align-items:flex-start;flex-direction:column;gap:8px}
+ .case-panel h3{font-size:20px}
+ .case-metric{font-size:11px}
+ .memory-figures{grid-template-columns:1fr;gap:12px}
+ .event-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .geometry-grid{grid-template-columns:1fr;gap:22px}
+ .geometry-card .case-panel-head{min-height:0}
+}
+@media(prefers-reduced-motion:reduce){.case-panel{animation:none}.case-toolbar button{transition:none}}
