@@ -26,7 +26,7 @@ window.GEOMEM_CONFIG = {
     sticks: 'assets/videos/sticks-2x.mp4',
     cup: 'assets/videos/cup-2x.mp4',
     pockets: 'assets/videos/pockets-2x.mp4',
-    cube: 'assets/videos/pickn-2x.mp4', apple: 'assets/videos/apple-2x.mp4'
+    cube: 'assets/videos/pickn-2x.mp4', apple: 'assets/videos/apple-2x.mp4?v=20261021'
   },
   posters: {sticks: 'assets/images/video-sticks.webp', cup: 'assets/images/video-cup.webp', pockets: 'assets/images/video-pockets.webp'},
   videoSpeeds: {sticks: 2, cup: 2, pockets: 2, apple: 2, cube: 2}, // Displayed speed relative to the original recording.
