@@ -19,7 +19,7 @@ window.GEOMEM_CONFIG = {
     { id: '5', name: 'X-humanoid' },
     { id: '6', name: 'Fudan University' }
   ],
-  links: { arxiv: null, code: 'https://github.com/GeoMem-VLA/GeoMem-VLA', huggingface: null },
+  links: { arxiv: 'https://arxiv.org/abs/2610.29866', code: 'https://github.com/GeoMem-VLA/GeoMem-VLA', huggingface: null },
   videos: {
     teaser: null, // 'assets/videos/teaser.mp4'
     reconstruction: null, eef: null, memory: null,
@@ -31,5 +31,13 @@ window.GEOMEM_CONFIG = {
   posters: {sticks: 'assets/images/video-sticks.webp', cup: 'assets/images/video-cup.webp', pockets: 'assets/images/video-pockets.webp'},
   videoSpeeds: {sticks: 2, cup: 2, pockets: 2, apple: 2, cube: 2}, // Displayed speed relative to the original recording.
   videoEncodedSpeeds: {sticks: 2, cup: 2, pockets: 2, apple: 2, cube: 2}, // Speed already encoded in the MP4 files.
-  bibtex: null // Add the official entry when publication metadata is available.
+  bibtex: `@misc{zhang2026geomemvlainternalizing3dscene,
+      title={GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models},
+      author={Qinfan Zhang and Yifan Luo and Haoyuan Shi and Guanlin Liu and Han Dong and Haozhe Shan and Yong Dai and Xiangcong Ren and Xiaozhu Ju},
+      year={2026},
+      eprint={2610.29866},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2610.29866},
+}`
 };
