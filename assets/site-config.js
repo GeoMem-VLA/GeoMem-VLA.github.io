@@ -19,7 +19,7 @@ window.GEOMEM_CONFIG = {
     { id: '5', name: 'X-humanoid' },
     { id: '6', name: 'Fudan University' }
   ],
-  links: { arxiv: 'https://arxiv.org/abs/2610.29866', code: 'https://github.com/GeoMem-VLA/GeoMem-VLA', huggingface: null },
+  links: { arxiv: 'https://arxiv.org/abs/2610.29866', code: 'https://github.com/GeoMem-VLA/GeoMem-VLA', huggingface: 'https://huggingface.co/rxc205/GEOMEM-VLA' },
   videos: {
     teaser: null, // 'assets/videos/teaser.mp4'
     reconstruction: null, eef: null, memory: null,
