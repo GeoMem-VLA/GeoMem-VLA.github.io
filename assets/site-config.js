@@ -28,7 +28,7 @@ window.GEOMEM_CONFIG = {
     pockets: 'assets/videos/pockets-2x.mp4',
     cube: 'assets/videos/pickn-2x.mp4', apple: 'assets/videos/apple-2x.mp4?v=20261021'
   },
-  posters: {sticks: 'assets/images/video-sticks.webp', cup: 'assets/images/video-cup.webp', pockets: 'assets/images/video-pockets.webp'},
+  posters: {cube: 'assets/images/video-cube.webp', sticks: 'assets/images/video-sticks.webp', cup: 'assets/images/video-cup.webp', pockets: 'assets/images/video-pockets.webp'},
   videoSpeeds: {sticks: 2, cup: 2, pockets: 2, apple: 2, cube: 2}, // Displayed speed relative to the original recording.
   videoEncodedSpeeds: {sticks: 2, cup: 2, pockets: 2, apple: 2, cube: 2}, // Speed already encoded in the MP4 files.
   bibtex: `@misc{zhang2026geomemvlainternalizing3dscene,

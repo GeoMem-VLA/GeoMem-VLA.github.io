@@ -176,15 +176,21 @@ for (const [key,path] of Object.entries(config.videos||{})) {
   video.setAttribute('aria-label',`${key} demonstration video`);
   const still=$('img',slot);video.poster=safeURL(config.posters?.[key])||still?.src||'';
   if(slot.classList.contains('task-media')){
-    const fallback=[...slot.childNodes];slot.replaceChildren(video);
+    slot.replaceChildren(video);
     // The native poster is only shown before playback. Pausing, buffering,
     // looping and returning to a slide retain the video's decoded frame.
     const kind=$('.media-kind',slot.closest('figure'));
     if(kind)kind.textContent=config.videoSpeeds?.[key] > 1 ? ` · ${config.videoSpeeds[key]}× speed` : ' · Video';
-    video.addEventListener('error',()=>{
-      slot.replaceChildren(...fallback);
-      if(kind)kind.textContent=' · Task setup';
-    },{once:true});
+    const retry=document.createElement('button');
+    retry.type='button';retry.className='video-retry';retry.textContent='Video could not load · Retry';retry.hidden=true;
+    slot.append(retry);
+    video.addEventListener('error',()=>{retry.hidden=false;});
+    video.addEventListener('playing',()=>{retry.hidden=true;});
+    retry.addEventListener('click',()=>{
+      retry.hidden=true;
+      video.load();
+      playSlideVideos(slot);
+    });
   }else{
     const figure=document.createElement('figure');figure.className='extra-video';figure.append(video);slot.append(figure);
     const placeholder=$('.case-placeholder',slot);
