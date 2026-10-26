@@ -26,11 +26,11 @@ window.GEOMEM_CONFIG = {
     sticks: 'assets/videos/sticks-2x.mp4',
     cup: 'assets/videos/cup-2x.mp4',
     pockets: 'assets/videos/pockets-2x.mp4',
-    cube: 'assets/videos/pickn-2x.mp4', apple: 'assets/videos/apple-2x.mp4?v=20261021'
+    cube4: 'assets/videos/pickn-4-2x.mp4', cube: 'assets/videos/pickn-2x.mp4', apple: 'assets/videos/apple-2x.mp4?v=20261021'
   },
-  posters: {cube: 'assets/images/video-cube.webp', sticks: 'assets/images/video-sticks.webp', cup: 'assets/images/video-cup.webp', pockets: 'assets/images/video-pockets.webp'},
-  videoSpeeds: {sticks: 2, cup: 2, pockets: 2, apple: 2, cube: 2}, // Displayed speed relative to the original recording.
-  videoEncodedSpeeds: {sticks: 2, cup: 2, pockets: 2, apple: 2, cube: 2}, // Speed already encoded in the MP4 files.
+  posters: {cube4: 'assets/images/video-cube4.webp', cube: 'assets/images/video-cube.webp', sticks: 'assets/images/video-sticks.webp', cup: 'assets/images/video-cup.webp', pockets: 'assets/images/video-pockets.webp'},
+  videoSpeeds: {sticks: 2, cup: 2, pockets: 2, apple: 2, cube: 2, cube4: 2}, // Displayed speed relative to the original recording.
+  videoEncodedSpeeds: {sticks: 2, cup: 2, pockets: 2, apple: 2, cube: 2, cube4: 2}, // Speed already encoded in the MP4 files.
   bibtex: `@misc{zhang2026geomemvlainternalizing3dscene,
       title={GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models},
       author={Qinfan Zhang and Yifan Luo and Haoyuan Shi and Guanlin Liu and Han Dong and Haozhe Shan and Yong Dai and Xiangcong Ren and Xiaozhu Ju},
