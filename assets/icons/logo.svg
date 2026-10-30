@@ -1,22 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
   <title id="title">GeoMem-VLA</title>
-  <desc id="desc">Minimal GeoMem-VLA project icon</desc>
+  <desc id="desc">Compact GM monogram for GeoMem-VLA</desc>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#F8FAFC"/>
-    </linearGradient>
-    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#0284C7"/>
-      <stop offset="0.52" stop-color="#4F46E5"/>
-      <stop offset="1" stop-color="#7C3AED"/>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0369A1"/>
+      <stop offset="1" stop-color="#6D28D9"/>
     </linearGradient>
   </defs>
-  <rect width="1024" height="1024" rx="208" fill="url(#background)"/>
-  <text x="512" y="506" text-anchor="middle" dominant-baseline="middle"
-        fill="url(#text)" font-family="Inter, SF Pro Display, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="116" font-weight="700" letter-spacing="-4">GeoMem</text>
-  <text x="512" y="642" text-anchor="middle" dominant-baseline="middle"
-        fill="#1E293B" font-family="Inter, SF Pro Display, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="92" font-weight="600" letter-spacing="10">VLA</text>
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="url(#brand)"/>
+  <g fill="none" stroke="#fff" stroke-width="5" stroke-linecap="square" stroke-linejoin="round">
+    <path d="M26 23C22 19 10 20 10 32S22 45 27 40V33H21"/>
+    <path d="M36 42V22L44 33L52 22V42"/>
+  </g>
 </svg>
