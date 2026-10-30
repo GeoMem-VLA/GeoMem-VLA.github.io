@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">GeoMem-VLA</title>
+  <desc id="desc">Minimal GeoMem-VLA project icon</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0284C7"/>
+      <stop offset="0.52" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="208" fill="url(#background)"/>
+  <text x="512" y="506" text-anchor="middle" dominant-baseline="middle"
+        fill="url(#text)" font-family="Inter, SF Pro Display, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="116" font-weight="700" letter-spacing="-4">GeoMem</text>
+  <text x="512" y="642" text-anchor="middle" dominant-baseline="middle"
+        fill="#1E293B" font-family="Inter, SF Pro Display, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="92" font-weight="600" letter-spacing="10">VLA</text>
+</svg>
