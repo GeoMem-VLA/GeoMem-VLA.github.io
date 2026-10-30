@@ -1,15 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" role="img" aria-labelledby="title desc">
   <title id="title">GeoMem-VLA</title>
-  <desc id="desc">Compact GM monogram for GeoMem-VLA</desc>
+  <desc id="desc">GeoMem above VLA, with compact spacing</desc>
   <defs>
-    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#0369A1"/>
-      <stop offset="1" stop-color="#6D28D9"/>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0284C7"/>
+      <stop offset="0.52" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#7C3AED"/>
     </linearGradient>
   </defs>
-  <rect x="1" y="1" width="62" height="62" rx="14" fill="url(#brand)"/>
-  <g fill="none" stroke="#fff" stroke-width="5" stroke-linecap="square" stroke-linejoin="round">
-    <path d="M26 23C22 19 10 20 10 32S22 45 27 40V33H21"/>
-    <path d="M36 42V22L44 33L52 22V42"/>
-  </g>
+  <rect width="400" height="240" rx="24" fill="url(#background)"/>
+  <text x="200" y="108" text-anchor="middle" fill="url(#text)"
+        font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="98" font-weight="700" letter-spacing="-4">GeoMem</text>
+  <text x="200" y="214" text-anchor="middle" fill="#1E293B"
+        font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="104" font-weight="600" letter-spacing="10">VLA</text>
 </svg>
