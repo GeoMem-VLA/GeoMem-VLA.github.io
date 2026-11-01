@@ -12,10 +12,10 @@
   <title>GeoMem-VLA</title>
   <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg?v=20261101-square">
   <link rel="stylesheet" href="assets/style.css?v=20261015-contrast">
-  <link rel="stylesheet" href="assets/chapters.css?v=20261101-square">
+  <link rel="stylesheet" href="assets/chapters.css?v=20261101-simple-citation">
   <link rel="stylesheet" href="assets/cases.css?v=20261015-contrast">
   <script src="assets/site-config.js?v=20261101-apple" defer></script>
-  <script src="assets/main.js?v=20261101-apple-citation" defer></script>
+  <script src="assets/main.js?v=20261101-simple-citation" defer></script>
   <script src="assets/chapters.js?v=20261013-citation-nav" defer></script>
   <script src="assets/cases.js?v=20261015-four-cases" defer></script>
 </head>
@@ -215,7 +215,7 @@
       <h2>Citation</h2>
       <p id="citation-placeholder" class="citation-placeholder">BibTeX coming soon.</p>
       <div class="citation-card" hidden>
-        <div class="citation-tools"><span class="citation-format">BibTeX</span><button id="copy-citation" type="button" aria-label="Copy BibTeX"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg><span class="copy-label">Copy</span></button></div>
+        <div class="citation-tools"><button id="copy-citation" type="button" aria-label="Copy BibTeX" title="Copy BibTeX"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg><svg class="copied-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></button></div>
         <pre id="bibtex" hidden tabindex="0" aria-label="BibTeX citation"></pre>
       </div>
       <span id="copy-status" role="status" class="citation-status"></span>

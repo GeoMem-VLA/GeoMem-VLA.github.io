@@ -207,17 +207,17 @@ if(config.bibtex){
     clearTimeout(copyReset);
     try{
       await navigator.clipboard.writeText(config.bibtex);
-      $('.copy-label').textContent='Copied';
+      $('#copy-citation').title='Copied';
       $('#copy-citation').classList.add('is-copied');
       $('#copy-status').textContent='BibTeX copied to clipboard.';
       copyReset=setTimeout(()=>{
-        $('.copy-label').textContent='Copy';
+        $('#copy-citation').title='Copy BibTeX';
         $('#copy-citation').classList.remove('is-copied');
         $('#copy-status').textContent='';
       },2500);
     }
     catch{
-      $('.copy-label').textContent='Copy';
+      $('#copy-citation').title='Copy BibTeX';
       $('#copy-citation').classList.remove('is-copied');
       $('#copy-status').textContent='Unable to copy. Select the citation and copy it manually.';
     }
