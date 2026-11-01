@@ -116,3 +116,16 @@ tr.ours th span{font-size:12px}
  .table-scroll table{font-size:15px}thead{font-size:14px}
  th,td{padding:12px 13px}
 }
+
+/* Citation: a quiet code card with an integrated copy action. */
+.citation-card{border:1px solid #dce3e9;border-radius:12px;overflow:hidden;background:#f8fafc}
+.citation-card .citation-tools{justify-content:space-between;padding:12px 20px;background:#f1f5f8;border-bottom:1px solid #e0e6ec}
+.citation-format{font-size:14px;font-weight:600;color:#526477;letter-spacing:.02em}
+.citation-card #copy-citation{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:94px;min-height:36px;padding:7px 12px;border:1px solid #cbd5df;border-radius:7px;background:#fff;color:#354e63;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:background .15s,border-color .15s}
+.citation-card #copy-citation:hover{background:#e9f0f6;border-color:#8fa4b6}
+.citation-card #copy-citation:focus-visible{outline:2px solid #49677c;outline-offset:3px}
+.citation-card #copy-citation.is-copied{color:#23704c;border-color:#9cc5ae;background:#f0f8f3}
+#bibtex{margin:0;padding:24px;border:0;background:transparent;color:#344456;font-family:Consolas,'SFMono-Regular','Liberation Mono',monospace;font-size:14px;font-weight:400;line-height:1.85;letter-spacing:0;white-space:pre-wrap;overflow-wrap:anywhere;tab-size:2;text-align:left}
+.citation-status{display:block;min-height:24px;margin-top:10px;text-align:right;font-size:13px;color:#49677c}
+@media(max-width:550px){.citation-card .citation-tools{padding:10px 14px}#bibtex{padding:16px;font-size:13px;line-height:1.75}}
+@media(prefers-reduced-motion:reduce){.citation-card #copy-citation{transition:none}}

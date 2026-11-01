@@ -188,8 +188,8 @@ for (const [key,path] of Object.entries(config.videos||{})) {
     video.addEventListener('playing',()=>{retry.hidden=true;});
     retry.addEventListener('click',()=>{
       retry.hidden=true;
-      video.load();
-      playSlideVideos(slot);
+      if(video.error)video.load();
+      video.play().catch(()=>{retry.textContent='Play video';retry.hidden=false;});
     });
   }else{
     const figure=document.createElement('figure');figure.className='extra-video';figure.append(video);slot.append(figure);
@@ -200,11 +200,27 @@ for (const [key,path] of Object.entries(config.videos||{})) {
 }
 if(config.bibtex){
   $('#citation-placeholder').hidden=true;
-  $('.citation-tools').hidden=false;
+  $('.citation-card').hidden=false;
   $('#bibtex').hidden=false;$('#bibtex').textContent=config.bibtex;
+  let copyReset;
   $('#copy-citation').addEventListener('click',async()=>{
-    try{await navigator.clipboard.writeText(config.bibtex);$('#copy-status').textContent='Copied.';}
-    catch{$('#copy-status').textContent='Select the entry to copy.';}
+    clearTimeout(copyReset);
+    try{
+      await navigator.clipboard.writeText(config.bibtex);
+      $('.copy-label').textContent='Copied';
+      $('#copy-citation').classList.add('is-copied');
+      $('#copy-status').textContent='BibTeX copied to clipboard.';
+      copyReset=setTimeout(()=>{
+        $('.copy-label').textContent='Copy';
+        $('#copy-citation').classList.remove('is-copied');
+        $('#copy-status').textContent='';
+      },2500);
+    }
+    catch{
+      $('.copy-label').textContent='Copy';
+      $('#copy-citation').classList.remove('is-copied');
+      $('#copy-status').textContent='Unable to copy. Select the citation and copy it manually.';
+    }
   });
 }
 
@@ -214,7 +230,12 @@ function playSlideVideos(slide) {
   requestAnimationFrame(() => $$('video', slide).forEach(video => {
     if(video.closest('[hidden]') || document.hidden || !video.closest('.chapter.is-in-view'))return;
     video.autoplay=true;
-    video.play().catch(()=>{});
+    video.preload='auto';
+    video.play().catch(error=>{
+      if(error.name==='AbortError'||video.closest('[hidden]')||document.hidden)return;
+      const retry=video.parentElement.querySelector('.video-retry');
+      if(retry){retry.textContent=video.error?'Video could not load · Retry':'Play video';retry.hidden=false;}
+    });
   }));
 }
 function syncVideoPlayback() {

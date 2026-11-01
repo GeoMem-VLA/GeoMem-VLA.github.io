@@ -12,10 +12,10 @@
   <title>GeoMem-VLA</title>
   <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg?v=20261030-wordmark">
   <link rel="stylesheet" href="assets/style.css?v=20261015-contrast">
-  <link rel="stylesheet" href="assets/chapters.css?v=20261030-logo-wordmark">
+  <link rel="stylesheet" href="assets/chapters.css?v=20261101-citation">
   <link rel="stylesheet" href="assets/cases.css?v=20261015-contrast">
-  <script src="assets/site-config.js?v=20261026-pickn4" defer></script>
-  <script src="assets/main.js?v=20261023-video-retry" defer></script>
+  <script src="assets/site-config.js?v=20261101-apple" defer></script>
+  <script src="assets/main.js?v=20261101-apple-citation" defer></script>
   <script src="assets/chapters.js?v=20261013-citation-nav" defer></script>
   <script src="assets/cases.js?v=20261015-four-cases" defer></script>
 </head>
@@ -72,23 +72,23 @@
       </div>
       <div class="case-showcase" data-case-showcase="geometry">
         <div class="case-toolbar" role="tablist" aria-label="3D reconstruction cases">
-          <button type="button" role="tab" aria-selected="true" data-case-tab="clean-microwave">Clean open microwave</button>
+          <button type="button" role="tab" aria-selected="true" data-case-tab="clean-microwave">Open microwave (clean)</button>
           <button type="button" role="tab" aria-selected="false" data-case-tab="blocks">Stack three blocks</button>
-          <button type="button" role="tab" aria-selected="false" data-case-tab="microwave">Open microwave</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="microwave">Open microwave (random)</button>
           <button type="button" role="tab" aria-selected="false" data-case-tab="laptop">Open laptop</button>
         </div>
         <div class="case-panels">
           <article class="case-panel" data-case-panel="clean-microwave">
-          <div class="case-panel-head"><div><span class="case-label">RoboTwin · Clean</span><h3>Clean open microwave</h3></div><span class="case-metric">t=0</span></div>
-          <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/geometry-sim/clean-open-microwave-t0000-pointmap.png" aria-label="Enlarge clean open microwave point map reconstruction"><img src="assets/images/cases/geometry-sim/clean-open-microwave-t0000-pointmap.png" width="1755" height="1676" loading="lazy" alt="Clean open microwave teacher target, GeoPlan reconstruction, and point error"></button><figcaption>Clean scene · three views · 256 patch-colored points</figcaption></figure>
+          <div class="case-panel-head"><div><span class="case-label">RoboTwin · Clean</span><h3>Open microwave (clean)</h3></div><span class="case-metric">t=0</span></div>
+          <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/geometry-sim/clean-open-microwave-t0000-pointmap.png" aria-label="Enlarge open microwave (clean) point map reconstruction"><img src="assets/images/cases/geometry-sim/clean-open-microwave-t0000-pointmap.png" width="1755" height="1676" loading="lazy" alt="Open microwave (clean) teacher target, GeoPlan reconstruction, and point error"></button><figcaption>Clean scene · three views · 256 patch-colored points</figcaption></figure>
         </article>
           <article class="case-panel" data-case-panel="blocks" hidden>
           <div class="case-panel-head"><div><span class="case-label">RoboTwin · Randomized</span><h3>Stack three blocks</h3></div><span class="case-metric">t=126</span></div>
           <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/geometry-sim/stack-blocks-randomized-t0126-pointmap.png" aria-label="Enlarge stack three blocks point map reconstruction"><img src="assets/images/cases/geometry-sim/stack-blocks-randomized-t0126-pointmap.png" width="1755" height="1676" loading="lazy" alt="Stack three blocks teacher target, GeoPlan reconstruction, and point error"></button><figcaption>Multi-stage stacking · three views · normalized point-map error</figcaption></figure>
         </article>
           <article class="case-panel" data-case-panel="microwave" hidden>
-          <div class="case-panel-head"><div><span class="case-label">RoboTwin · Randomized</span><h3>Open microwave</h3></div><span class="case-metric">t=0</span></div>
-          <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/geometry-sim/open-microwave-randomized-t0000-pointmap.png" aria-label="Enlarge open microwave point map reconstruction"><img src="assets/images/cases/geometry-sim/open-microwave-randomized-t0000-pointmap.png" width="1755" height="1676" loading="lazy" alt="Open microwave teacher target, GeoPlan reconstruction, and point error"></button><figcaption>Randomized scene · three views · normalized point-map error</figcaption></figure>
+          <div class="case-panel-head"><div><span class="case-label">RoboTwin · Randomized</span><h3>Open microwave (random)</h3></div><span class="case-metric">t=0</span></div>
+          <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/geometry-sim/open-microwave-randomized-t0000-pointmap.png" aria-label="Enlarge open microwave (random) point map reconstruction"><img src="assets/images/cases/geometry-sim/open-microwave-randomized-t0000-pointmap.png" width="1755" height="1676" loading="lazy" alt="Open microwave (random) teacher target, GeoPlan reconstruction, and point error"></button><figcaption>Randomized scene · three views · normalized point-map error</figcaption></figure>
         </article>
           <article class="case-panel" data-case-panel="laptop" hidden>
           <div class="case-panel-head"><div><span class="case-label">RoboTwin · Randomized</span><h3>Open laptop</h3></div><span class="case-metric">t=0</span></div>
@@ -106,20 +106,20 @@
       </div>
       <div class="case-showcase" data-case-showcase="eef">
         <div class="case-toolbar" role="tablist" aria-label="EEF prediction cases">
-          <button type="button" role="tab" aria-selected="true" data-case-tab="clean-microwave">Clean open microwave</button>
+          <button type="button" role="tab" aria-selected="true" data-case-tab="clean-microwave">Open microwave (clean)</button>
           <button type="button" role="tab" aria-selected="false" data-case-tab="blocks">Stack three blocks</button>
-          <button type="button" role="tab" aria-selected="false" data-case-tab="microwave">Open microwave</button>
+          <button type="button" role="tab" aria-selected="false" data-case-tab="microwave">Open microwave (random)</button>
           <button type="button" role="tab" aria-selected="false" data-case-tab="laptop">Open laptop</button>
         </div>
         <div class="case-panels">
           <article class="case-panel" data-case-panel="clean-microwave">
-            <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/eef-original/clean-open-microwave-t0000-eef.png" aria-label="Enlarge clean open microwave EEF track prediction"><img src="assets/images/cases/eef-original/clean-open-microwave-t0000-eef.png" width="2288" height="676" loading="lazy" alt="Clean open microwave EEF track prediction"></button><figcaption>Clean RoboTwin · original case export · frame 0</figcaption></figure>
+            <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/eef-original/clean-open-microwave-t0000-eef.png" aria-label="Enlarge open microwave (clean) EEF track prediction"><img src="assets/images/cases/eef-original/clean-open-microwave-t0000-eef.png" width="2288" height="676" loading="lazy" alt="Open microwave (clean) EEF track prediction"></button><figcaption>Clean RoboTwin · original case export · frame 0</figcaption></figure>
           </article>
           <article class="case-panel" data-case-panel="blocks" hidden>
             <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/eef-original/stack-blocks-randomized-t0126-eef.png" aria-label="Enlarge stack three blocks EEF track prediction"><img src="assets/images/cases/eef-original/stack-blocks-randomized-t0126-eef.png" width="2288" height="676" loading="lazy" alt="Randomized stack three blocks EEF track prediction"></button><figcaption>Randomized RoboTwin · original case export · frame 126</figcaption></figure>
           </article>
           <article class="case-panel" data-case-panel="microwave" hidden>
-            <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/eef-original/open-microwave-randomized-t0000-eef.png" aria-label="Enlarge open microwave EEF track prediction"><img src="assets/images/cases/eef-original/open-microwave-randomized-t0000-eef.png" width="2288" height="676" loading="lazy" alt="Randomized open microwave EEF track prediction"></button><figcaption>Randomized RoboTwin · original case export · frame 0</figcaption></figure>
+            <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/eef-original/open-microwave-randomized-t0000-eef.png" aria-label="Enlarge open microwave (random) EEF track prediction"><img src="assets/images/cases/eef-original/open-microwave-randomized-t0000-eef.png" width="2288" height="676" loading="lazy" alt="Open microwave (random) EEF track prediction"></button><figcaption>Randomized RoboTwin · original case export · frame 0</figcaption></figure>
           </article>
           <article class="case-panel" data-case-panel="laptop" hidden>
             <figure class="case-figure"><button class="zoomable" data-zoom="assets/images/cases/eef-original/open-laptop-randomized-t0000-eef.png" aria-label="Enlarge open laptop EEF track prediction"><img src="assets/images/cases/eef-original/open-laptop-randomized-t0000-eef.png" width="2288" height="676" loading="lazy" alt="Randomized open laptop EEF track prediction"></button><figcaption>Randomized RoboTwin · original case export · frame 0</figcaption></figure>
@@ -199,7 +199,7 @@
             <figcaption><h3>Pick Cube n Times (n = 4)</h3><p>AgileX Cobot Magic 2<span class="media-kind"> · Video</span></p></figcaption>
           </figure>
           <figure class="task gallery-slide" data-slide data-title="Cover and Find the Apple">
-            <div class="task-media" data-media-slot="apple"><img src="assets/images/task-apple.webp" width="336" height="271" loading="lazy" alt="Cover and Find the Apple: task setup from Figure 4"></div>
+            <div class="task-media" data-media-slot="apple"><img src="assets/images/video-apple.webp" width="336" height="271" loading="lazy" alt="Cover and Find the Apple: video preview"></div>
             <figcaption><h3>Cover and Find the Apple</h3><p>AgileX Cobot Magic 2 · 80% success<span class="media-kind"> · Task setup</span></p></figcaption>
           </figure>
         </div>
@@ -214,8 +214,11 @@
     <section id="citation-block" class="section">
       <h2>Citation</h2>
       <p id="citation-placeholder" class="citation-placeholder">BibTeX coming soon.</p>
-      <div class="citation-tools" hidden><button id="copy-citation" type="button">Copy BibTeX</button><span id="copy-status" role="status"></span></div>
-      <pre id="bibtex" hidden></pre>
+      <div class="citation-card" hidden>
+        <div class="citation-tools"><span class="citation-format">BibTeX</span><button id="copy-citation" type="button" aria-label="Copy BibTeX"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg><span class="copy-label">Copy</span></button></div>
+        <pre id="bibtex" hidden tabindex="0" aria-label="BibTeX citation"></pre>
+      </div>
+      <span id="copy-status" role="status" class="citation-status"></span>
     </section>
   </main>
   <footer><a href="#top">GeoMem-VLA</a></footer>
