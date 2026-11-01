@@ -118,14 +118,15 @@ tr.ours th span{font-size:12px}
 }
 
 /* Citation: plain reference block and an icon-only copy action. */
-.citation-card .citation-tools{justify-content:flex-end;margin-bottom:8px}
+.citation-card{position:relative}
+.citation-card .citation-tools{position:absolute;top:10px;right:10px;justify-content:flex-end;margin:0}
 .citation-card #copy-citation{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:8px;border:0;border-radius:5px;background:transparent;color:#526477;cursor:pointer;transition:background .15s,color .15s}
 .citation-card #copy-citation:hover{background:#edf2f6;color:#29485f}
 .citation-card #copy-citation:focus-visible{outline:2px solid #49677c;outline-offset:2px}
 .citation-card #copy-citation.is-copied{color:#23704c}
 #copy-citation .copied-icon,#copy-citation.is-copied .copy-icon{display:none}
 #copy-citation.is-copied .copied-icon{display:block}
-#bibtex{margin:0;padding:24px;border:1px solid #dce3e9;border-radius:0;background:#f5f6f7;color:#344456;font-family:Consolas,'SFMono-Regular','Liberation Mono',monospace;font-size:14px;font-weight:400;line-height:1.85;letter-spacing:0;white-space:pre-wrap;overflow-wrap:anywhere;tab-size:2;text-align:left}
+#bibtex{margin:0;padding:24px 60px 24px 24px;border:1px solid #dce3e9;border-radius:8px;background:#f5f6f7;color:#344456;font-family:Consolas,'SFMono-Regular','Liberation Mono',monospace;font-size:14px;font-weight:400;line-height:1.85;letter-spacing:0;white-space:pre-wrap;overflow-wrap:anywhere;tab-size:2;text-align:left}
 .citation-status{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-@media(max-width:550px){#bibtex{padding:16px;font-size:13px;line-height:1.75}}
+@media(max-width:550px){#bibtex{padding:20px 52px 20px 16px;font-size:13px;line-height:1.75}}
 @media(prefers-reduced-motion:reduce){.citation-card #copy-citation{transition:none}}
