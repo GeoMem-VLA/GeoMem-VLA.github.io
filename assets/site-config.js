@@ -8,7 +8,7 @@ window.GEOMEM_CONFIG = {
     { name: 'Han Dong', affiliation: '5' },
     { name: 'Haozhe Shan', affiliation: '5,6' },
     { name: 'Yong Dai', affiliation: '5' },
-    { name: 'Xiangcong Ren', affiliation: '5', marker: '‡' },
+    { name: 'Xiancong Ren', affiliation: '5', marker: '‡' },
     { name: 'Xiaozhu Ju', affiliation: '5', marker: '✉' }
   ],
   affiliations: [
