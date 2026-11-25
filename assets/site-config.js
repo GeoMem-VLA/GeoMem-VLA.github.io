@@ -6,7 +6,7 @@ window.GEOMEM_CONFIG = {
     { name: 'Haoyuan Shi', affiliation: '3,5' },
     { name: 'Guanlin Liu', affiliation: '4,5' },
     { name: 'Han Dong', affiliation: '5' },
-    { name: 'Haozhe Shan', affiliation: '5,6' },
+    { name: 'Haozhe Shan', affiliation: '6' },
     { name: 'Yong Dai', affiliation: '5' },
     { name: 'Xiancong Ren', affiliation: '5', marker: '‡' },
     { name: 'Xiaozhu Ju', affiliation: '5', marker: '✉' }
@@ -16,7 +16,7 @@ window.GEOMEM_CONFIG = {
     { id: '2', name: 'Renmin University of China' },
     { id: '3', name: 'University of Science and Technology of China' },
     { id: '4', name: 'The Chinese University of Hong Kong, Shenzhen' },
-    { id: '5', name: 'X-humanoid' },
+    { id: '5', name: 'Beijing Innovation Center of Humanoid Robotic' },
     { id: '6', name: 'Fudan University' }
   ],
   links: { arxiv: 'https://arxiv.org/abs/2610.29866', code: 'https://github.com/GeoMem-VLA/GeoMem-VLA', huggingface: 'https://huggingface.co/rxc205/GEOMEM-VLA' },
